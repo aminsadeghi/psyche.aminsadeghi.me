@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The Psyche | Amin Sadeghi</title>
+
+    <meta name="generator" content="Amin Global Systems">
+    <meta name="description" content="Psychology read as story — essays and case files on how the self is formed, wounded, and made whole.">
+
+    <link rel="canonical" href="https://psyche.aminsadeghi.me/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The Psyche">
+    <meta property="og:url" content="https://psyche.aminsadeghi.me/">
+    <meta property="og:title" content="The Psyche | Amin Sadeghi">
+    <meta property="og:description" content="Psychology read as story — essays and case files on how the self is formed, wounded, and made whole.">
+    <meta property="og:image" content="https://psyche.aminsadeghi.me/amin-sadeghi-256.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://psyche.aminsadeghi.me/">
+    <meta property="twitter:title" content="The Psyche | Amin Sadeghi">
+    <meta property="twitter:description" content="Psychology read as story — essays and case files on how the self is formed, wounded, and made whole.">
+    <meta property="twitter:image" content="https://psyche.aminsadeghi.me/amin-sadeghi-256.jpg">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <style>
+        /* CORE LAYOUT */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #050e1b;
+            background-image: radial-gradient(circle at top right, #111d2e 0%, #050e1b 100%);
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            height: 100vh; /* Fallback for older browsers */
+            height: 100dvh; /* Dynamic height to fix mobile bars */
+            overflow: hidden;
+        }
+
+        /* LEFT PANEL: Menu & Navigation */
+        .left-panel {
+            flex: 0 0 320px;
+            padding: 40px 30px;
+            background: rgba(10, 15, 25, 0.4);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .left-panel::-webkit-scrollbar { display: none; }
+        .left-panel { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .brand-header {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        h1 {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            color: #fff;
+            margin: 0 0 5px 0;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            color: #c5a059;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* SERIES GROUPING */
+        .series-group {
+            margin-bottom: 30px;
+        }
+
+        .series-header {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+
+        .series-num {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 20px;
+            color: #c5a059;
+            font-style: italic;
+            margin-right: 10px;
+        }
+
+        .series-title-wrap {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .series-label {
+            font-size: 9px;
+            color: #c5a059;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .series-title {
+            font-size: 14px;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        /* MENU LIST ITEMS */
+        .menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .story-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-radius: 6px;
+        }
+
+        .story-link:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .story-link.active {
+            background: linear-gradient(90deg, rgba(197, 160, 89, 0.1) 0%, rgba(0,0,0,0) 100%);
+            border-left: 2px solid #c5a059;
+        }
+
+        .story-link-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .case-num {
+            font-size: 11px;
+            color: #64748b;
+            font-family: monospace;
+        }
+
+        .story-link.active .case-num {
+            color: #c5a059;
+        }
+
+        .story-title {
+            font-size: 13px;
+            color: #b3b9c5;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .story-link:hover .story-title, .story-link.active .story-title {
+            color: #fff;
+        }
+
+        .page-count {
+            font-size: 10px;
+            color: #475569;
+        }
+
+
+        /* RIGHT PANEL: The Dashboard */
+        .right-panel {
+            flex: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 60px;
+            box-sizing: border-box;
+            overflow: hidden; /* Prevents the background video from spilling */
+        }
+
+        /* RIGHT PANEL VIDEO BACKGROUND */
+        .right-panel-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .right-bg-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .right-bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Solid dark blue at the top for perfect text readability, smoothly fading to transparent */
+            background: linear-gradient(to bottom, #050e1b 0%, rgba(5, 14, 27, 0.85) 25%, rgba(5, 14, 27, 0.2) 100%);
+            z-index: 1;
+        }
+
+        /* Elevate all content above the video layer */
+        .dashboard-header, .dash-title, .dash-tagline, .board-wrapper, .dashboard-footer {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* DASHBOARD HEADER (Metadata) */
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .dash-meta-left {
+            display: flex;
+            gap: 15px;
+            font-size: 10px;
+            color: #c5a059;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .dash-meta-right {
+            display: flex;
+            gap: 15px;
+            font-size: 10px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .dash-title {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 42px;
+            color: #fff;
+            margin: 0 0 15px 0;
+            font-weight: normal;
+        }
+
+        .dash-tagline {
+            font-size: 16px;
+            color: #8a9bb1;
+            font-style: italic;
+            margin: 0 0 40px 0;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        /* VISUAL NODE BOARD */
+        .board-wrapper {
+            position: relative;
+            flex: 1;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .board-wrapper.loaded {
+            opacity: 1;
+        }
+
+        .connections-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        line {
+            stroke: rgba(197, 160, 89, 0.4);
+            stroke-width: 2px;
+            stroke-dasharray: 6 6;
+        }
+
+        .node-container {
+            position: absolute;
+            width: 24%;
+            aspect-ratio: 16/10;
+            background: #0a0f19;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            padding: 4px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .node-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+            filter: grayscale(40%) contrast(1.2);
+            flex: 1;
+            min-height: 0;
+        }
+
+        .node-label {
+            display: block;
+            color: #8a9bb1;
+            font-size: 9px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-top: 8px;
+            padding-bottom: 4px;
+        }
+
+        .node-dot {
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 8px;
+            background: #c5a059;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #c5a059;
+            z-index: 5;
+        }
+
+        .read-btn-container {
+                position: absolute;
+                bottom: 25px; /* Adjust this number if you want it higher or lower */
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 20;
+            }
+
+        /* Fixed Coordinates for the 3 Nodes */
+        .coord-1 { top: 30%; left: 35%; }
+        .coord-2 { top: 70%; left: 55%; }
+        .coord-3 { top: 40%; left: 75%; }
+
+        /* DASHBOARD FOOTER (Dock & Button) */
+        .dashboard-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 20px;
+        }
+
+        .mini-dock {
+            display: flex;
+            gap: 8px;
+        }
+
+        .mini-dock-item {
+            width: 24px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+        .mini-dock-item.active { background: #c5a059; }
+
+        .read-btn {
+            background: linear-gradient(145deg, #d4b26a, #b8944f);
+            color: #050e1b;
+            font-size: 11px;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.2s;
+            border: 1px solid #ebd299;
+        }
+
+        .read-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
+        }
+
+        @media (max-width: 800px) {
+            body {
+                flex-direction: column;
+            }
+
+            .left-panel {
+                flex: 1; /* Expands to fill empty space, pushing the bottom section down */
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                padding: 25px 20px;
+            }
+
+            .right-panel {
+                flex: none; /* Height is strictly defined by the title, text, photos, and button */
+                width: 100%;
+                padding: 25px 20px;
+            }
+
+            .right-panel-bg {
+                display: none; /* Completely disables video UI on mobile */
+            }
+
+            /* HIDE EXTRA TOP INFO */
+            .dashboard-header {
+                display: none;
+            }
+
+            .dash-title {
+                font-size: 26px; 
+                margin: 0 0 10px 0;
+            }
+
+            .dash-tagline {
+                font-size: 14px;
+                margin: 0 0 20px 0;
+            }
+
+            /* ALIGN PHOTOS IN ONE ROW */
+            .board-wrapper {
+                flex: none; 
+                min-height: auto;
+                margin: 0 0 20px 0; /* Tight gap between photos and button */
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .connections-layer {
+                display: none; /* Hide background SVG lines */
+            }
+
+            .node-container {
+                position: relative; /* Override desktop absolute pos */
+                top: auto !important; 
+                left: auto !important;
+                transform: none; /* Remove translation offset */
+                width: 32%; /* Fit 3 in a row cleanly */
+                margin: 0;
+            }
+
+            .node-label {
+                font-size: 7px; /* Prevent text overflow */
+                letter-spacing: 1px;
+                line-height: 1.3;
+            }
+
+            /* FOOTER CLEANUP */
+            .dashboard-footer {
+                flex-direction: column;
+                margin: 0; 
+                padding: 0;
+            }
+
+            /* HIDE NUMBER OF SLIDES INDICATOR */
+            .mini-dock {
+                display: none;
+            }
+
+            .read-btn {
+                width: 100%;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 16px 24px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="left-panel">
+        <div class="brand-header">
+            <h1>Amin Sadeghi</h1>
+            <div class="subtitle">The Psyche</div>
+        </div>
+        <div id="menu-container">
+            <!-- Menu will be injected here via JS -->
+        </div>
+    </div>
+
+    <div class="right-panel">
+        <div class="right-panel-bg">
+            <video id="right-bg-video" class="right-bg-video" autoplay loop muted playsinline disablePictureInPicture></video>
+            <div class="right-bg-overlay"></div>
+        </div>
+
+        <div class="dashboard-header">
+            <div class="dash-meta-left" id="dash-meta-left">
+                <!-- e.g. CASE 02 • SERIES I -->
+            </div>
+            <div class="dash-meta-right" id="dash-meta-right">
+                <!-- e.g. STATUS: COMPLETE -->
+            </div>
+        </div>
+
+        <h2 class="dash-title" id="dash-title">The Psyche</h2>
+        <p class="dash-tagline" id="dash-tagline">Psychology, read as story. The first case file is coming soon.</p>
+
+        <div class="board-wrapper" id="board-wrapper">
+            <svg class="connections-layer" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <line x1="35" y1="30" x2="55" y2="70" />
+                <line x1="55" y1="70" x2="75" y2="40" />
+            </svg>
+            
+            <div class="node-container coord-1">
+                <div class="node-dot"></div>
+                <img id="node-img-1" src="" alt="">
+                <span class="node-label" id="node-label-1"></span>
+            </div>
+            
+            <div class="node-container coord-2">
+                <div class="node-dot"></div>
+                <img id="node-img-2" src="" alt="">
+                <span class="node-label" id="node-label-2"></span>
+            </div>
+            
+            <div class="node-container coord-3">
+                <div class="node-dot"></div>
+                <img id="node-img-3" src="" alt="">
+                <span class="node-label" id="node-label-3"></span>
+            </div>
+        </div>
+
+        <div class="dashboard-footer">
+            <div class="mini-dock" id="mini-dock">
+                <!-- Page indicators injected here -->
+            </div>
+            <a href="#" class="read-btn" id="read-btn" style="display:none;">Read the Case &rarr;</a>
+        </div>
+    </div>
+
+    <script>
+        // Check if the server injected the data. If not, this remains null.
+        let catalogData = window.__CATALOG_DATA__ || null;
+
+        // 1. Fallback Menu Builder (Used only if Server-Side Rendering misses)
+        function buildMenu(data) {
+            const container = document.getElementById('menu-container');
+            container.innerHTML = '';
+
+            data.series.forEach(series => {
+                const seriesCases = data.cases.filter(c => c.seriesId === series.id);
+                if (seriesCases.length === 0) return;
+
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'series-group';
+                
+                const romanNumeral = series.title.split(' ')[1] || ''; 
+                groupDiv.innerHTML = `
+                    <div class="series-header">
+                        <div class="series-num">${romanNumeral}</div>
+                        <div class="series-title-wrap">
+                            <div class="series-label">${series.title}</div>
+                            <div class="series-title">${series.subtitle}</div>
+                        </div>
+                    </div>
+                `;
+
+                const listDiv = document.createElement('div');
+                listDiv.className = 'menu-list';
+
+                seriesCases.forEach(c => {
+                    const caseNum = c.id.padStart(2, '0');
+                    const link = document.createElement('div');
+                    link.className = 'story-link';
+                    link.id = `link-case-${c.id}`;
+                    link.onclick = () => loadCase(c.id);
+                    
+                    link.innerHTML = `
+                        <div class="story-link-left">
+                            <span class="case-num">${caseNum}</span>
+                            <span class="story-title">${c.title}</span>
+                        </div>
+                        <span class="page-count">${c.pageCount}</span>
+                    `;
+                    listDiv.appendChild(link);
+                });
+
+                groupDiv.appendChild(listDiv);
+                container.appendChild(groupDiv);
+            });
+        }
+
+        // 2. Load Case Logic
+        function loadCase(caseId) {
+            if (!catalogData) return;
+            const currentCase = catalogData.cases.find(c => c.id === caseId);
+            if (!currentCase) return;
+
+            localStorage.setItem('lastActiveCase', caseId);
+            const seriesInfo = catalogData.series.find(s => s.id === currentCase.seriesId);
+
+            // --- DYNAMIC VIDEO BACKGROUND LOGIC ---
+            const bgVideo = document.getElementById('right-bg-video');
+            if (window.innerWidth > 800) {
+                // Securely extract the series number (e.g., converts 'series-1' or '1' to just '1')
+                const seriesMatch = seriesInfo.id.match(/\d+/);
+                const seriesNum = seriesMatch ? seriesMatch[0] : seriesInfo.id.replace('series-', '');
+                const newVidSrc = `https://psyche.aminsadeghi.me/video/series-${seriesNum}.mp4`;
+
+                // Only reload if the series has actually changed
+                if (bgVideo.getAttribute('src') !== newVidSrc) {
+                    bgVideo.style.opacity = 0; // Seamless fade out
+                    bgVideo.setAttribute('src', newVidSrc);
+                    
+                    bgVideo.oncanplay = () => {
+                        const playPromise = bgVideo.play();
+                        if (playPromise !== undefined) {
+                            playPromise.then(() => {
+                                bgVideo.style.opacity = 1; // Fade in once playing
+                            }).catch(e => console.log("Video playback paused by browser policy"));
+                        }
+                    };
+                    
+                    bgVideo.onerror = () => {
+                        bgVideo.style.opacity = 0; // Fail gracefully if video doesn't exist on server
+                    };
+                }
+            } else {
+                bgVideo.style.opacity = 0;
+                bgVideo.pause();
+            }
+            // --------------------------------------
+
+            document.querySelectorAll('.story-link').forEach(link => link.classList.remove('active'));
+            const activeLink = document.getElementById(`link-case-${caseId}`);
+            if (activeLink) activeLink.classList.add('active');
+
+            const boardWrapper = document.getElementById('board-wrapper');
+            boardWrapper.classList.remove('loaded');
+
+            if (currentCase.nodes && currentCase.nodes.length === 3) {
+                currentCase.nodes.forEach(node => {
+                    const preloadImg = new Image();
+                    preloadImg.src = node.image;
+                });
+            }
+
+            setTimeout(() => {
+                document.getElementById('dash-meta-left').innerText = `CASE ${currentCase.id.padStart(2, '0')} • ${seriesInfo.title.toUpperCase()}`;
+                document.getElementById('dash-meta-right').innerText = `STATUS: ${currentCase.status.toUpperCase()}`;
+                document.getElementById('dash-title').innerText = currentCase.title;
+                document.getElementById('dash-tagline').innerText = `"${currentCase.tagline}"`;
+
+                if (currentCase.nodes && currentCase.nodes.length === 3) {
+                    for(let i=1; i<=3; i++) {
+                        const nodeImg = document.getElementById(`node-img-${i}`);
+                        nodeImg.src = currentCase.nodes[i-1].image;
+                        nodeImg.alt = currentCase.nodes[i-1].label;
+                        document.getElementById(`node-label-${i}`).innerText = currentCase.nodes[i-1].label;
+                    }
+                }
+
+                const dock = document.getElementById('mini-dock');
+                dock.innerHTML = '';
+                for(let i=0; i<currentCase.pageCount; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = i === 0 ? 'mini-dock-item active' : 'mini-dock-item';
+                    dock.appendChild(dot);
+                }
+
+                const readBtn = document.getElementById('read-btn');
+                readBtn.href = `/case-file/${currentCase.slug}/start`;
+                readBtn.style.display = 'inline-block';
+
+                boardWrapper.classList.add('loaded');
+            }, 300);
+        }
+
+        // 3. Boot Sequence
+        async function init() {
+            try {
+                // If the server didn't inject the data, fetch it manually (The Safety Net)
+                if (!catalogData) {
+                    const response = await fetch('/data/catalog.json');
+                    catalogData = await response.json();
+                    buildMenu(catalogData); // Build the menu since the server didn't
+                }
+
+                // Load the last viewed case
+                if (catalogData && catalogData.cases.length > 0) {
+                    const savedCase = localStorage.getItem('lastActiveCase');
+                    const caseToLoad = savedCase ? savedCase : catalogData.cases[0].id;
+                    loadCase(caseToLoad);
+                    
+                    const savedScroll = localStorage.getItem('menuScrollPos');
+                    if (savedScroll) {
+                        document.querySelector('.left-panel').scrollTop = parseInt(savedScroll, 10);
+                    }
+                }
+            } catch (error) {
+                console.error("Failed to load catalog:", error);
+                document.getElementById('dash-title').innerText = "Error loading connection.";
+            }
+        }
+
+        // Start the app
+        init();
+
+        window.addEventListener('beforeunload', () => {
+            const leftPanel = document.querySelector('.left-panel');
+            if (leftPanel) {
+                localStorage.setItem('menuScrollPos', leftPanel.scrollTop);
+            }
+        });
+    </script>
+
+    <!-- The Three Worlds — shared collection menu (see PROJECT-SCOPE.md) -->
+    <script src="https://aminsadeghi.me/menu.js?project=psyche" defer></script>
+</body>
+</html>

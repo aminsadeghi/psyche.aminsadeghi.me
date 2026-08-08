@@ -1,0 +1,11 @@
+{
+  "series": [
+    {
+      "id": "series-1",
+      "title": "Series I",
+      "subtitle": "The Foundations",
+      "file": "series-1.json"
+    }
+  ],
+  "cases": []
+}

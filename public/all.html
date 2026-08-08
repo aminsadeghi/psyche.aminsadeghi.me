@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>The Psyche — Complete Works | Amin Sadeghi</title>
+<style>
+  :root {
+    --bg: #faf7f2;
+    --ink: #2a2118;
+    --muted: #8a7a66;
+    --accent: #c5a059;
+    --rule: #e0d5c5;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.75;
+  }
+  .toolbar {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--ink); color: #f5efe4;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 24px; gap: 16px;
+  }
+  .toolbar .tb-title { font-size: 15px; letter-spacing: 2px; text-transform: uppercase; }
+  .toolbar button {
+    background: var(--accent); color: #241c12; border: none;
+    font-family: inherit; font-size: 14px; font-weight: bold;
+    padding: 9px 22px; cursor: pointer; letter-spacing: 1px;
+  }
+  .toolbar button:hover { filter: brightness(1.1); }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 48px 24px 96px; }
+  .doc-head { text-align: center; margin-bottom: 56px; }
+  .doc-head .site { font-size: 34px; letter-spacing: 6px; text-transform: uppercase; }
+  .doc-head .by { margin-top: 8px; color: var(--muted); font-style: italic; }
+  .doc-head .stamp { margin-top: 14px; font-size: 13px; color: var(--muted); }
+  .doc-head .rights { margin-top: 6px; font-size: 13px; color: var(--muted); }
+  .toc { border: 1px solid var(--rule); padding: 24px 28px; margin-bottom: 64px; }
+  .toc h2 { font-size: 14px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px; }
+  .toc .toc-series { margin-top: 12px; font-weight: bold; }
+  .toc .toc-case { margin-left: 18px; font-size: 15px; }
+  .toc .toc-case .d { color: var(--muted); font-size: 13px; }
+  .toc a { color: inherit; text-decoration: none; }
+  .toc a:hover { color: var(--accent); }
+  .series-block { margin-top: 72px; }
+  .series-head { text-align: center; border-top: 3px double var(--accent); padding-top: 28px; margin-bottom: 8px; }
+  .series-head .s-label { font-size: 13px; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); }
+  .series-head .s-sub { font-size: 26px; margin-top: 6px; }
+  .case-block { margin-top: 56px; }
+  .case-head { margin-bottom: 8px; }
+  .case-head .c-kicker { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); }
+  .case-head h2 { font-size: 24px; margin-top: 4px; }
+  .case-head .c-tagline { font-style: italic; color: var(--muted); margin-top: 8px; font-size: 15px; }
+  .page-block { margin-top: 40px; border-top: 1px solid var(--rule); padding-top: 24px; }
+  .page-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .page-head h3 { font-size: 19px; }
+  .page-head .p-num { font-size: 12px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
+  .p-date {
+    font-size: 13px; color: var(--ink); background: #efe7d8;
+    padding: 2px 10px; white-space: nowrap; border: 1px solid var(--rule);
+  }
+  .p-content { margin-top: 14px; }
+  .p-content p { margin-bottom: 14px; text-align: justify; }
+  .case-footer {
+    margin-top: 28px; padding-top: 10px; border-top: 1px solid var(--rule);
+    font-size: 12.5px; color: var(--muted); text-align: center; letter-spacing: 0.5px;
+  }
+  .doc-end { margin-top: 80px; text-align: center; border-top: 3px double var(--accent); padding-top: 24px; font-size: 14px; color: var(--muted); }
+  .print-footer { display: none; }
+  #status { text-align: center; padding: 60px 20px; color: var(--muted); font-style: italic; }
+
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #17130e; --ink: #e8dfd0; --muted: #9a8b74; --rule: #372e22; }
+    .p-date { background: #241d13; color: var(--ink); }
+  }
+
+  @media print {
+    :root { --bg: #ffffff; --ink: #000000; --muted: #444444; --rule: #bbbbbb; }
+    body { background: #fff; color: #000; font-size: 11.5pt; }
+    .toolbar { display: none; }
+    .wrap { max-width: none; padding: 0 0 40px; }
+    .p-date { background: none; border: 1px solid #999; }
+    .series-block { break-before: page; margin-top: 0; padding-top: 10mm; }
+    .case-block { break-before: page; margin-top: 0; padding-top: 6mm; }
+    .page-block { break-inside: avoid-page; }
+    .p-content p { orphans: 3; widows: 3; }
+    .print-footer {
+      display: block; position: fixed; bottom: 0; left: 0; right: 0;
+      text-align: center; font-size: 9pt; color: #333;
+      border-top: 0.5pt solid #999; padding-top: 4pt; background: #fff;
+    }
+    @page { margin: 16mm 15mm 20mm; }
+  }
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <span class="tb-title">The Psyche — Complete Works</span>
+  <button onclick="window.print()">Export to PDF</button>
+</div>
+
+<div class="wrap">
+  <div id="status">Gathering the complete works&hellip;</div>
+  <div id="doc" style="display:none">
+    <div class="doc-head">
+      <div class="site">The Psyche</div>
+      <div class="by">Briefings on the world as it works &middot; by Amin Sadeghi</div>
+      <div class="stamp" id="doc-stamp"></div>
+      <div class="rights">&copy; 2026 Amin Sadeghi &mdash; All Rights Reserved &mdash; aminsadeghi@gmail.com</div>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div id="content"></div>
+    <div class="doc-end">
+      &mdash; End of the Complete Works &mdash;<br>
+      &copy; 2026 Amin Sadeghi &mdash; All Rights Reserved &mdash; aminsadeghi@gmail.com<br>
+      Original publication: <span id="site-url"></span>
+    </div>
+  </div>
+</div>
+
+<div class="print-footer">&copy; 2026 Amin Sadeghi &mdash; All Rights Reserved &mdash; aminsadeghi@gmail.com</div>
+
+<script>
+(async function () {
+  const CONFIG = {
+    siteName: 'The Psyche',
+    siteUrl: 'https://psyche.aminsadeghi.me',
+    defaultUnit: 'Case'
+  };
+  document.getElementById('site-url').textContent = CONFIG.siteUrl;
+
+  const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+  try {
+    const bust = '?t=' + Date.now();
+    const catalog = await (await fetch('/data/catalog.json' + bust, { cache: 'no-store' })).json();
+
+    const seriesData = {};
+    for (const s of catalog.series) {
+      try {
+        seriesData[s.id] = await (await fetch('/data/' + s.file + bust, { cache: 'no-store' })).json();
+      } catch (e) { seriesData[s.id] = null; }
+    }
+
+    let toc = '<h2>Contents</h2>';
+    let html = '';
+    let pageTotal = 0;
+
+    for (const s of catalog.series) {
+      const cases = catalog.cases.filter(c => c.seriesId === s.id);
+      const withPages = cases.filter(c => {
+        const sd = seriesData[s.id];
+        const story = sd && sd.cases && sd.cases[c.slug];
+        return story && story.pages && story.pages.length > 0;
+      });
+      if (withPages.length === 0) continue;
+
+      toc += '<div class="toc-series">' + esc(s.title) + ' &mdash; ' + esc(s.subtitle) + '</div>';
+      html += '<div class="series-block"><div class="series-head">' +
+              '<div class="s-label">' + esc(s.title) + '</div>' +
+              '<div class="s-sub">' + esc(s.subtitle) + '</div></div>';
+
+      for (const c of withPages) {
+        const story = seriesData[s.id].cases[c.slug];
+        const unit = c.unit || CONFIG.defaultUnit;
+        const num = c.tale ?? c.id;
+        const anchor = 'c-' + c.slug;
+        const dates = story.pages.map(p => p.date).filter(Boolean);
+        const dateSpan = dates.length
+          ? (dates[0] === dates[dates.length - 1] ? dates[0] : dates[0] + ' &ndash; ' + dates[dates.length - 1])
+          : '';
+
+        toc += '<div class="toc-case"><a href="#' + anchor + '">' + esc(unit) + ' ' + esc(num) + ': ' +
+               esc(c.title) + '</a> <span class="d">(' + story.pages.length + ' pages' +
+               (dateSpan ? ', ' + dateSpan : '') + ')</span></div>';
+
+        html += '<div class="case-block" id="' + anchor + '">' +
+                '<div class="case-head">' +
+                '<div class="c-kicker">' + esc(s.subtitle) + ' &middot; ' + esc(unit) + ' ' + esc(num) + '</div>' +
+                '<h2>' + esc(c.title) + '</h2>' +
+                (c.tagline ? '<div class="c-tagline">&ldquo;' + esc(c.tagline) + '&rdquo;</div>' : '') +
+                '</div>';
+
+        for (const p of story.pages) {
+          pageTotal++;
+          html += '<div class="page-block">' +
+                  '<div class="page-head">' +
+                  '<div><div class="p-num">Page ' + esc(p.page) + ' of ' + story.pages.length + '</div>' +
+                  '<h3>' + esc(p.title) + '</h3></div>' +
+                  '<span class="p-date">Published: ' + esc(p.date || 'undated') + '</span>' +
+                  '</div>' +
+                  '<div class="p-content">' + (p.content || '') + '</div>' +
+                  '</div>';
+        }
+
+        html += '<div class="case-footer">&copy; 2026 Amin Sadeghi &mdash; All Rights Reserved &mdash; ' +
+                'aminsadeghi@gmail.com &mdash; ' + esc(CONFIG.siteUrl) + '</div></div>';
+      }
+      html += '</div>';
+    }
+
+    document.getElementById('doc-stamp').textContent =
+      'Complete compilation · ' + pageTotal + ' pages · generated ' +
+      new Date().toLocaleDateString('en-GB') + (catalog.updated ? ' · catalogue updated ' + catalog.updated : '');
+    document.getElementById('toc').innerHTML = toc;
+    document.getElementById('content').innerHTML = html;
+    document.getElementById('status').style.display = 'none';
+    document.getElementById('doc').style.display = 'block';
+    document.title = CONFIG.siteName + ' — Complete Works | Amin Sadeghi';
+  } catch (err) {
+    document.getElementById('status').textContent =
+      'Could not load the works (' + err.message + '). Open this page from ' + CONFIG.siteUrl + '/all.html';
+  }
+})();
+</script>
+</body>
+</html>
