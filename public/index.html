@@ -634,7 +634,11 @@
                 // Only reload if the series has actually changed
                 if (bgVideo.getAttribute('src') !== newVidSrc) {
                     bgVideo.style.opacity = 0; // Seamless fade out
-                    bgVideo.setAttribute('src', newVidSrc);
+                    // Defer the heavy video download to idle time so the page becomes
+                    // usable immediately and the tab's loading spinner stops right away.
+                    var _loadBgVideo = function () { bgVideo.setAttribute('src', newVidSrc); };
+                    if ('requestIdleCallback' in window) { requestIdleCallback(_loadBgVideo, { timeout: 2000 }); }
+                    else { setTimeout(_loadBgVideo, 800); }
                     
                     bgVideo.oncanplay = () => {
                         const playPromise = bgVideo.play();
