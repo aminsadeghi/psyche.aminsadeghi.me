@@ -45,6 +45,17 @@ also works on its own — it falls back to fetching `/data/catalog.json` client-
 Deploy the same way as the sibling sites (Cloudflare Workers Builds on push).
 **Committing/pushing is left to you.**
 
+## Homepage art (thumbnails + video)
+
+- **Thumbnails (the 3-node board):** each case's `nodes` point at three images. The
+  first case expects `public/images/thumbs/1.1.jpg`, `1.2.jpg`, `1.3.jpg` — **add your
+  own files there** (until you do, those three slots show a broken-image icon). Naming
+  convention: `<caseId>.{1,2,3}.jpg`.
+- **Per-series background video (desktop):** drop `public/video/series-1.mp4` and the
+  homepage plays it behind the board for that series' cases. Missing = plain dark
+  background (fails gracefully). Path is relative (`/video/series-N.mp4`), so it works
+  locally and in production.
+
 ## To-dos before launch
 
 - The favicons and `amin-sadeghi-256.jpg` are copied from The Archives as placeholders — swap if you want a distinct Psyche identity.
