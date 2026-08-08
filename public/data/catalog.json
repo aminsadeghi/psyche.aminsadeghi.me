@@ -7,5 +7,15 @@
       "file": "series-1.json"
     }
   ],
-  "cases": []
+  "cases": [
+    {
+      "id": "1",
+      "slug": "the-self-esteem-scoreboard",
+      "seriesId": "series-1",
+      "title": "The Self-Esteem Scoreboard",
+      "tagline": "Eight ways to feel worthy — and why only one of them can't be taken from you.",
+      "status": "Complete",
+      "pageCount": 9
+    }
+  ]
 }

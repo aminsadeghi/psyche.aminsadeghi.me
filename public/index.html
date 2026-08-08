@@ -675,7 +675,13 @@
                 document.getElementById('dash-title').innerText = currentCase.title;
                 document.getElementById('dash-tagline').innerText = `"${currentCase.tagline}"`;
 
-                if (currentCase.nodes && currentCase.nodes.length === 3) {
+                // Show the 3-node board only when a case actually has artwork;
+                // otherwise hide it so a text-only case looks intentional, not broken.
+                const hasNodes = currentCase.nodes && currentCase.nodes.length === 3;
+                document.querySelectorAll('.node-container').forEach(n => n.style.display = hasNodes ? 'flex' : 'none');
+                const connLayer = document.querySelector('.connections-layer');
+                if (connLayer) connLayer.style.display = hasNodes ? 'block' : 'none';
+                if (hasNodes) {
                     for(let i=1; i<=3; i++) {
                         const nodeImg = document.getElementById(`node-img-${i}`);
                         nodeImg.src = currentCase.nodes[i-1].image;
