@@ -144,9 +144,12 @@ export function generateStoryHTML(caseId, storySlug, pageData, allPages, prevLin
   const hideNext = pageData.page === total ? 'visibility: hidden;' : '';
 
   // --- JSON-LD STRUCTURED DATA ---
-  // For articles, datePublished and dateModified both derive from the
-  // "Published" date shown top-right (pageData.date).
+  // datePublished derives from the "Published" date (pageData.date); dateModified
+  // derives from the "Edited" date (pageData.edited) so revisions are reflected in
+  // structured data. When a page has never been edited (or predates the field),
+  // dateModified falls back to the published date.
   const isoDate = toISODate(pageData.date);
+  const isoEdited = toISODate(pageData.edited) || isoDate;
   const crumbCaseName = caseTitle || `Case File 0${caseId}`;
   const jsonLdScript = jsonLdScriptTag({
     "@context": "https://schema.org",
@@ -159,7 +162,7 @@ export function generateStoryHTML(caseId, storySlug, pageData, allPages, prevLin
         "image": ogImageUrl,
         "url": canonicalUrl,
         "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
-        ...(isoDate ? { datePublished: isoDate, dateModified: isoDate } : {}),
+        ...(isoDate ? { datePublished: isoDate, dateModified: isoEdited } : {}),
         "inLanguage": "en",
         "author": { "@id": `${baseUrl}/#person` },
         "publisher": { "@id": `${baseUrl}/#person` },
@@ -344,10 +347,21 @@ export function generateStoryHTML(caseId, storySlug, pageData, allPages, prevLin
 
       .date-meta {
         position: absolute;
-        top: 71px; 
-        right: 40px; 
-        color: #64748b; 
-        font-size: 11px; 
+        top: 71px;
+        right: 40px;
+        color: #64748b;
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .date-meta-edited {
+        position: absolute;
+        top: 88px;
+        right: 40px;
+        color: #64748b;
+        font-size: 11px;
         letter-spacing: 2px;
         text-transform: uppercase;
         font-weight: 600;
@@ -462,7 +476,8 @@ export function generateStoryHTML(caseId, storySlug, pageData, allPages, prevLin
         .document { padding: 40px 16px; border-radius: 8px; }
         
         .metadata { font-size: 9px; top: 27px; right: 25px; }
-        .date-meta { font-size: 9px; top: 41px; right: 25px; } 
+        .date-meta { font-size: 9px; top: 41px; right: 25px; }
+        .date-meta-edited { font-size: 9px; top: 55px; right: 25px; }
         
         h1 { font-size: 26px; }
         p { font-size: 17px; color: #cdd3dd; }
@@ -526,6 +541,7 @@ export function generateStoryHTML(caseId, storySlug, pageData, allPages, prevLin
     <div class="document">
       <div class="metadata">Case File 0${caseId}</div>
       <div class="date-meta">Published: ${pageData.date}</div>
+      ${pageData.edited && pageData.edited !== pageData.date ? `<div class="date-meta-edited">Edited: ${pageData.edited}</div>` : ''}
       <div class="page-counter">Exhibit ${pageData.page} of ${total}</div>
       <h1>${displayTitle}</h1>
       <div class="content">${pageData.content}</div>
