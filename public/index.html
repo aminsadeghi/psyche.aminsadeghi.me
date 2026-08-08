@@ -629,7 +629,7 @@
                 // Securely extract the series number (e.g., converts 'series-1' or '1' to just '1')
                 const seriesMatch = seriesInfo.id.match(/\d+/);
                 const seriesNum = seriesMatch ? seriesMatch[0] : seriesInfo.id.replace('series-', '');
-                const newVidSrc = `https://psyche.aminsadeghi.me/video/series-${seriesNum}.mp4`;
+                const newVidSrc = `/video/series-${seriesNum}.mp4`;
 
                 // Only reload if the series has actually changed
                 if (bgVideo.getAttribute('src') !== newVidSrc) {
@@ -675,13 +675,7 @@
                 document.getElementById('dash-title').innerText = currentCase.title;
                 document.getElementById('dash-tagline').innerText = `"${currentCase.tagline}"`;
 
-                // Show the 3-node board only when a case actually has artwork;
-                // otherwise hide it so a text-only case looks intentional, not broken.
-                const hasNodes = currentCase.nodes && currentCase.nodes.length === 3;
-                document.querySelectorAll('.node-container').forEach(n => n.style.display = hasNodes ? 'flex' : 'none');
-                const connLayer = document.querySelector('.connections-layer');
-                if (connLayer) connLayer.style.display = hasNodes ? 'block' : 'none';
-                if (hasNodes) {
+                if (currentCase.nodes && currentCase.nodes.length === 3) {
                     for(let i=1; i<=3; i++) {
                         const nodeImg = document.getElementById(`node-img-${i}`);
                         nodeImg.src = currentCase.nodes[i-1].image;

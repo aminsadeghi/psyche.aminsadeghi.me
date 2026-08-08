@@ -1,0 +1,13 @@
+Drop per-series background videos here, named by series number:
+
+    series-1.mp4
+    series-2.mp4
+    ...
+
+The homepage plays /video/series-N.mp4 as a muted, looping background behind the
+node board on desktop (screens wider than 800px), for whichever series' case is
+selected. If the file is missing, the homepage just shows the plain dark background
+(it fails gracefully) — so adding series-1.mp4 here is all it takes to light it up.
+
+Use a dark, low-motion, web-optimised MP4 (H.264). This .txt is only here to keep
+the folder in the repo; you can delete it once real videos are added.
