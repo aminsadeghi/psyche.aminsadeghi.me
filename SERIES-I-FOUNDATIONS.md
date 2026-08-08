@@ -34,11 +34,12 @@ hard question it answers**.
    Locus of control, radical responsibility, author vs. victim. The keystone. **DONE**
    — shipped as *The Cage*: the walk-on-part-in-the-war vs. lead-role-in-a-cage trade
    (comfort of the known); opening varied from the Scoreboard (no ranked table — the
-   trade + two-sentence grammar device); typology kept as five "bars" (Blamer, Waiter,
-   Sign, Cynic, Golden Cage); turn on fault ≠ responsibility; motto callback lands it.
-   *The Sign* = outsourcing the choice itself to fate/God ("I'll leave it to God to
-   show me the way"); resolves on "God shows the way, you take the steps — the meeting
-   is grace, the rhythm is yours."
+   trade + two-sentence grammar device folded into the opener); tightened to **6 pages**
+   (was 10, felt stretched) — three "bars" (Blamer, Sign, Golden Cage); turn on
+   fault ≠ responsibility; motto callback lands it. *The Sign* = outsourcing the choice
+   itself to fate/God ("I'll leave it to God to show me the way"); resolves on "God shows
+   the way, you take the steps — the meeting is grace, the rhythm is yours." (Cut in the
+   trim: Two Sentences and Why-We-Sign as standalone pages, plus the Waiter and Cynic bars.)
 3. **Fear** — *"Almost everything you call a personality flaw is fear wearing a
    costume."* Framed as **love as the absence of fear** — **not** the courage /
    "do it afraid" angle. Fear is the engine under control, jealousy, anger,
