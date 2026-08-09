@@ -118,7 +118,7 @@ export default {
               
               seriesCases.forEach(c => {
                 const caseNum = c.id.padStart(2, '0');
-                menuHtml += `<div class="story-link" id="link-case-${c.id}" onclick="loadCase('${c.id}')"><div class="story-link-left"><span class="case-num">${caseNum}</span><span class="story-title">${c.title}</span></div><span class="page-count">${c.pageCount}</span></div>`;
+                menuHtml += `<div class="story-link" id="link-case-${c.id}" onclick="loadCase('${c.id}')"><div class="story-link-left"><span class="case-num">${caseNum}</span><span class="story-title">${c.title}</span></div><span class="page-count">${c.pageCount > 0 ? c.pageCount : 'Soon'}</span></div>`;
               });
               
               menuHtml += `</div></div>`;

@@ -604,7 +604,7 @@
                             <span class="case-num">${caseNum}</span>
                             <span class="story-title">${c.title}</span>
                         </div>
-                        <span class="page-count">${c.pageCount}</span>
+                        <span class="page-count">${c.pageCount > 0 ? c.pageCount : 'Soon'}</span>
                     `;
                     listDiv.appendChild(link);
                 });
@@ -697,8 +697,13 @@
                 }
 
                 const readBtn = document.getElementById('read-btn');
-                readBtn.href = `/case-file/${currentCase.slug}/start`;
-                readBtn.style.display = 'inline-block';
+                if (currentCase.pageCount > 0) {
+                    readBtn.href = `/case-file/${currentCase.slug}/start`;
+                    readBtn.style.display = 'inline-block';
+                } else {
+                    readBtn.removeAttribute('href');
+                    readBtn.style.display = 'none';
+                }
 
                 boardWrapper.classList.add('loaded');
             }, 300);

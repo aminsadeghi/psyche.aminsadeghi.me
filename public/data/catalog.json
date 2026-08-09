@@ -5,6 +5,12 @@
       "title": "Series I",
       "subtitle": "The Foundations",
       "file": "series-1.json"
+    },
+    {
+      "id": "series-2",
+      "title": "Series II",
+      "subtitle": "The Body",
+      "file": "series-2.json"
     }
   ],
   "cases": [
@@ -34,6 +40,34 @@
         { "image": "/images/thumbs/2.1.jpg", "label": "The Cage" },
         { "image": "/images/thumbs/2.2.jpg", "label": "The Bars" },
         { "image": "/images/thumbs/2.3.jpg", "label": "The Open Field" }
+      ]
+    },
+    {
+      "id": "3",
+      "slug": "you-are-what-you-eat",
+      "seriesId": "series-2",
+      "title": "You Are What You Eat",
+      "tagline": "How the food you put in your body quietly authors the thoughts you think.",
+      "status": "Complete",
+      "pageCount": 3,
+      "nodes": [
+        { "image": "/images/thumbs/3.1.jpg", "label": "The Plate" },
+        { "image": "/images/thumbs/3.2.jpg", "label": "The Gut" },
+        { "image": "/images/thumbs/3.3.jpg", "label": "The Mind" }
+      ]
+    },
+    {
+      "id": "4",
+      "slug": "liquid-courage",
+      "seriesId": "series-2",
+      "title": "Liquid Courage",
+      "tagline": "The one thing people drink to become less the author of their own life — the alibi you buy in advance, and the refuge that teaches you to run.",
+      "status": "Complete",
+      "pageCount": 3,
+      "nodes": [
+        { "image": "/images/thumbs/4.1.jpg", "label": "Liquid Courage" },
+        { "image": "/images/thumbs/4.2.jpg", "label": "The Alibi" },
+        { "image": "/images/thumbs/4.3.jpg", "label": "The Refuge" }
       ]
     }
   ]
