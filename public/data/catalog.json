@@ -78,6 +78,20 @@
     },
     {
       "id": "5",
+      "slug": "sugar",
+      "seriesId": "series-2",
+      "title": "Sugar",
+      "tagline": "The pleasure arrives up front; the cost is sent to an address you never check — including the quiet window when your immune first-responders go sluggish.",
+      "status": "Complete",
+      "pageCount": 3,
+      "nodes": [
+        { "image": "/images/thumbs/5.1.jpg", "label": "Sugar" },
+        { "image": "/images/thumbs/5.2.jpg", "label": "The Guard" },
+        { "image": "/images/thumbs/5.3.jpg", "label": "No Receipt" }
+      ]
+    },
+    {
+      "id": "6",
       "slug": "first-light",
       "seriesId": "series-2",
       "title": "Sleep",
@@ -85,13 +99,13 @@
       "status": "Complete",
       "pageCount": 2,
       "nodes": [
-        { "image": "/images/thumbs/5.1.jpg", "label": "Sleep" },
-        { "image": "/images/thumbs/5.2.jpg", "label": "The Claim" },
-        { "image": "/images/thumbs/5.3.jpg", "label": "The Number" }
+        { "image": "/images/thumbs/6.1.jpg", "label": "Sleep" },
+        { "image": "/images/thumbs/6.2.jpg", "label": "The Claim" },
+        { "image": "/images/thumbs/6.3.jpg", "label": "The Number" }
       ]
     },
     {
-      "id": "6",
+      "id": "7",
       "slug": "the-bottomless-bowl",
       "seriesId": "series-3",
       "title": "The Bottomless Bowl",
@@ -99,13 +113,13 @@
       "status": "Complete",
       "pageCount": 3,
       "nodes": [
-        { "image": "/images/thumbs/6.1.jpg", "label": "The Bowl" },
-        { "image": "/images/thumbs/6.2.jpg", "label": "The Chase" },
-        { "image": "/images/thumbs/6.3.jpg", "label": "The Ledger" }
+        { "image": "/images/thumbs/7.1.jpg", "label": "The Bowl" },
+        { "image": "/images/thumbs/7.2.jpg", "label": "The Chase" },
+        { "image": "/images/thumbs/7.3.jpg", "label": "The Ledger" }
       ]
     },
     {
-      "id": "7",
+      "id": "8",
       "slug": "the-counterfeit",
       "seriesId": "series-3",
       "title": "The Counterfeit",
@@ -113,13 +127,13 @@
       "status": "Complete",
       "pageCount": 3,
       "nodes": [
-        { "image": "/images/thumbs/7.1.jpg", "label": "The Lid" },
-        { "image": "/images/thumbs/7.2.jpg", "label": "The Bar" },
-        { "image": "/images/thumbs/7.3.jpg", "label": "The Lens" }
+        { "image": "/images/thumbs/8.1.jpg", "label": "The Lid" },
+        { "image": "/images/thumbs/8.2.jpg", "label": "The Bar" },
+        { "image": "/images/thumbs/8.3.jpg", "label": "The Lens" }
       ]
     },
     {
-      "id": "8",
+      "id": "9",
       "slug": "gratitude",
       "seriesId": "series-3",
       "title": "Gratitude",
@@ -127,9 +141,9 @@
       "status": "Complete",
       "pageCount": 3,
       "nodes": [
-        { "image": "/images/thumbs/8.1.jpg", "label": "The Move" },
-        { "image": "/images/thumbs/8.2.jpg", "label": "Overflow" },
-        { "image": "/images/thumbs/8.3.jpg", "label": "The Bowl" }
+        { "image": "/images/thumbs/9.1.jpg", "label": "The Move" },
+        { "image": "/images/thumbs/9.2.jpg", "label": "Overflow" },
+        { "image": "/images/thumbs/9.3.jpg", "label": "The Bowl" }
       ]
     }
   ]

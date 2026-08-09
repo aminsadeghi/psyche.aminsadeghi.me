@@ -62,6 +62,37 @@
         }
       ]
     },
+    "sugar": {
+      "pages": [
+        {
+          "page": 1,
+          "slug": "sugar",
+          "title": "Sugar",
+          "date": "10/08/2026",
+          "edited": "10/08/2026",
+          "description": "Every other input hands you a bill you can read — the drunk, the fatigue, the crash. Sugar gives the pleasure up front and sends its cost to an address you never check.",
+          "content": "<p>Every other thing you put into your body eventually hands you a bill you can read. Alcohol gives you the drunk, and then the hangover. Too little sleep hands you the fatigue. Even an ordinary bad meal delivers an afternoon slump you could trace, if you cared to, back to the plate. The consequence is <strong>felt</strong> — and because it is felt, it can, at least in principle, be learned from.</p><p>Sugar is the exception, and that is precisely why it is dangerous. It gives you the pleasure up front, in full and at once — and then sends its costs to an <strong>address you never check.</strong> There is no drunk. There is no bill you can read. Whatever sugar does inside you, it does <strong>quietly,</strong> below the floor of anything you will feel.</p><p>This is the one input in this series whose damage leaves no receipt — and an input with no receipt is a special kind of problem, because agency runs entirely on <strong>cause and effect.</strong> You can only take responsibility for a consequence you can trace back to its cause. Sever that wire, and willpower has nothing to grip. So it is worth looking, just once, at one of the costs you were never going to feel.</p>"
+        },
+        {
+          "page": 2,
+          "slug": "the-first-responders",
+          "title": "The First Responders",
+          "date": "10/08/2026",
+          "edited": "10/08/2026",
+          "description": "Neutrophils, your immune system's most numerous first responders, patrol the blood and swallow invaders whole. A flood of sugar does not kill them; it appears to make them briefly sluggish.",
+          "content": "<p>Deep in your bloodstream, right now, an army is on patrol. Its most numerous soldiers are a white blood cell called the <strong>neutrophil</strong> — your immune system's <strong>first responders.</strong> Their job is blunt and heroic: they cruise the blood hunting invading bacteria and microbes, and when they find one, they <strong>swallow it whole.</strong> The technical name for eating a threat alive is <em>phagocytosis;</em> the plain fact is that these cells are the front line that meets an infection before you even know you have one.</p><p>Here is what a flood of sugar does to them — and, just as importantly, what it does not. It does <strong>not</strong> kill them, and it does not lower your count; you have exactly as many soldiers as before. What appears to change is how well they <strong>work.</strong> When you take in a large load of simple sugar, your blood glucose spikes, and in that high-glucose environment the neutrophils seem to turn <strong>sluggish</strong> — slower to grip surfaces, slower to engulf the very bacteria they exist to destroy.</p><p>The effect is temporary — a <strong>window,</strong> not a wound. For a stretch of hours after the sugar, your front line runs at reduced efficiency: fully staffed, and quietly worse at its job. The guard is not gone. It is simply, for a while, half asleep.</p>"
+        },
+        {
+          "page": 3,
+          "slug": "no-one-blames-the-cake",
+          "title": "No One Blames the Cake",
+          "date": "10/08/2026",
+          "edited": "10/08/2026",
+          "description": "The window is real, brief, and completely invisible — so the cost is never attributed. Sugar's deepest trick is that agency cannot act on a consequence it cannot perceive.",
+          "content": "<p>Now put the two facts together, and the trap closes. The window is brief, and it is <strong>completely invisible.</strong> You do not feel your neutrophils slow. There is no symptom, no signal, no sensation of a lowered guard — as far as your awareness is concerned, <strong>nothing happened at all.</strong></p><p>So if, some days later, an infection that might have been met at the gate instead gets a foothold and you come down with something, you will reach for a cause — and the one thing you will never reach for is the cake. Perhaps it played a part; perhaps it did not. You cannot know, and <strong>that is exactly the point.</strong> The sugar and the sickness sit too far apart in time, and the mechanism between them was never available to your senses, so the mind — which can only connect what it can perceive — never even puts the two in the same room to ask.</p><p>That is sugar's real trick, and it runs deeper than any craving. Its companion piece in this series, on food, named the cost you <em>feel and misread</em> — the crash you mistake for a mood. This is the other half: the cost you <strong>never feel at all.</strong> And it names the hardest discipline the body asks of you — not to resist what tastes good, but to take seriously the <strong>consequences that arrive without a receipt.</strong> The inputs that shape you most are the ones you never catch in the act.</p>"
+        }
+      ]
+    },
     "first-light": {
       "pages": [
         {
