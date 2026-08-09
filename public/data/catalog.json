@@ -47,7 +47,7 @@
       "slug": "you-are-what-you-eat",
       "seriesId": "series-2",
       "title": "You Are What You Eat",
-      "tagline": "How the food you put in your body quietly authors the thoughts you think.",
+      "tagline": "Your thoughts feel like you — but some are just chemistry, and you're holding the spoon.",
       "status": "Complete",
       "pageCount": 3,
       "nodes": [
@@ -61,13 +61,27 @@
       "slug": "liquid-courage",
       "seriesId": "series-2",
       "title": "Liquid Courage",
-      "tagline": "The one thing people drink to become less the author of their own life — the alibi you buy in advance, and the refuge that teaches you to run.",
+      "tagline": "The anti-agency drug — the alibi you buy in advance, and the refuge that teaches you to run.",
       "status": "Complete",
       "pageCount": 3,
       "nodes": [
         { "image": "/images/thumbs/4.1.jpg", "label": "Liquid Courage" },
         { "image": "/images/thumbs/4.2.jpg", "label": "The Alibi" },
         { "image": "/images/thumbs/4.3.jpg", "label": "The Refuge" }
+      ]
+    },
+    {
+      "id": "5",
+      "slug": "first-light",
+      "seriesId": "series-2",
+      "title": "First Light",
+      "tagline": "Forget the hour-quota no one can actually measure — the real lever is whether you rise to claim the day, or wait to be told what it will be.",
+      "status": "Complete",
+      "pageCount": 2,
+      "nodes": [
+        { "image": "/images/thumbs/5.1.jpg", "label": "First Light" },
+        { "image": "/images/thumbs/5.2.jpg", "label": "The Claim" },
+        { "image": "/images/thumbs/5.3.jpg", "label": "The Number" }
       ]
     }
   ]
