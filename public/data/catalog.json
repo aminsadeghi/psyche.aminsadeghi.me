@@ -101,25 +101,11 @@
       "nodes": [
         { "image": "/images/thumbs/6.1.jpg", "label": "The Bowl" },
         { "image": "/images/thumbs/6.2.jpg", "label": "The Chase" },
-        { "image": "/images/thumbs/6.3.jpg", "label": "The Turn" }
+        { "image": "/images/thumbs/6.3.jpg", "label": "The Ledger" }
       ]
     },
     {
       "id": "7",
-      "slug": "the-scoreboard-of-scarcity",
-      "seriesId": "series-3",
-      "title": "The Scoreboard of Scarcity",
-      "tagline": "You already keep a private ledger of everything you lack. Gratitude is the only entry on it that needs no one else to lose.",
-      "status": "Complete",
-      "pageCount": 3,
-      "nodes": [
-        { "image": "/images/thumbs/7.1.jpg", "label": "The Ledger" },
-        { "image": "/images/thumbs/7.2.jpg", "label": "The Treadmill" },
-        { "image": "/images/thumbs/7.3.jpg", "label": "Enough" }
-      ]
-    },
-    {
-      "id": "8",
       "slug": "the-counterfeit",
       "seriesId": "series-3",
       "title": "The Counterfeit",
@@ -127,37 +113,23 @@
       "status": "Complete",
       "pageCount": 3,
       "nodes": [
-        { "image": "/images/thumbs/8.1.jpg", "label": "The Lid" },
-        { "image": "/images/thumbs/8.2.jpg", "label": "The Bar" },
-        { "image": "/images/thumbs/8.3.jpg", "label": "The Lens" }
+        { "image": "/images/thumbs/7.1.jpg", "label": "The Lid" },
+        { "image": "/images/thumbs/7.2.jpg", "label": "The Bar" },
+        { "image": "/images/thumbs/7.3.jpg", "label": "The Lens" }
       ]
     },
     {
-      "id": "9",
+      "id": "8",
       "slug": "gratitude",
       "seriesId": "series-3",
       "title": "Gratitude",
-      "tagline": "Not the feeling on command, but the deliberate act of reading what you already have as a field to work in rather than a poverty to escape.",
+      "tagline": "Not the feeling on command, but the deliberate act of reading what you already have as a field to work in rather than a poverty to escape — kept alive without killing the want.",
       "status": "Complete",
       "pageCount": 3,
       "nodes": [
-        { "image": "/images/thumbs/9.1.jpg", "label": "The Move" },
-        { "image": "/images/thumbs/9.2.jpg", "label": "The Author" },
-        { "image": "/images/thumbs/9.3.jpg", "label": "Overflow" }
-      ]
-    },
-    {
-      "id": "10",
-      "slug": "the-limit",
-      "seriesId": "series-3",
-      "title": "The Limit",
-      "tagline": "Gratitude is not resignation. The test is whether you are still free to want the hard thing — or whether wanting has quietly been outlawed and the flatness renamed peace.",
-      "status": "Complete",
-      "pageCount": 3,
-      "nodes": [
-        { "image": "/images/thumbs/10.1.jpg", "label": "False Peace" },
-        { "image": "/images/thumbs/10.2.jpg", "label": "The Living Want" },
-        { "image": "/images/thumbs/10.3.jpg", "label": "The Bowl" }
+        { "image": "/images/thumbs/8.1.jpg", "label": "The Move" },
+        { "image": "/images/thumbs/8.2.jpg", "label": "Overflow" },
+        { "image": "/images/thumbs/8.3.jpg", "label": "The Bowl" }
       ]
     }
   ]
