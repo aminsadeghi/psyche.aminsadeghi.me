@@ -17,6 +17,12 @@
       "title": "Series III",
       "subtitle": "The Wanting",
       "file": "series-3.json"
+    },
+    {
+      "id": "series-4",
+      "title": "Series IV",
+      "subtitle": "The Future Self",
+      "file": "series-4.json"
     }
   ],
   "cases": [
@@ -144,6 +150,34 @@
         { "image": "/images/thumbs/9.1.jpg", "label": "The Move" },
         { "image": "/images/thumbs/9.2.jpg", "label": "Overflow" },
         { "image": "/images/thumbs/9.3.jpg", "label": "The Bowl" }
+      ]
+    },
+    {
+      "id": "10",
+      "slug": "underinvestment",
+      "seriesId": "series-4",
+      "title": "Underinvestment",
+      "tagline": "The part of you that decides files the person you'll become as a stranger — so you keep mailing them the bill, and mistake it for freedom.",
+      "status": "Complete",
+      "pageCount": 3,
+      "nodes": [
+        { "image": "/images/thumbs/10.1.jpg", "label": "The Scanner" },
+        { "image": "/images/thumbs/10.2.jpg", "label": "The Bill" },
+        { "image": "/images/thumbs/10.3.jpg", "label": "The Bridge" }
+      ]
+    },
+    {
+      "id": "11",
+      "slug": "overinvestment",
+      "seriesId": "series-4",
+      "title": "Overinvestment",
+      "tagline": "You can't let go of it because you already spent the future on it — it became your plans, your identity, your story, and releasing it now would demolish a self you already live inside.",
+      "status": "Complete",
+      "pageCount": 3,
+      "nodes": [
+        { "image": "/images/thumbs/11.1.jpg", "label": "The Blueprint" },
+        { "image": "/images/thumbs/11.2.jpg", "label": "The Prison" },
+        { "image": "/images/thumbs/11.3.jpg", "label": "The Open Hand" }
       ]
     }
   ]
