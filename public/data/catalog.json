@@ -70,48 +70,76 @@
     },
     {
       "id": "4",
+      "slug": "minerals",
+      "seriesId": "series-2",
+      "title": "Minerals",
+      "tagline": "You are, in part, a short list of elements — and the mind you call yours runs on whether they are there or not.",
+      "status": "Complete",
+      "pageCount": 3,
+      "nodes": [
+        { "image": "/images/thumbs/4.1.jpg", "label": "The Elements" },
+        { "image": "/images/thumbs/4.2.jpg", "label": "The List" },
+        { "image": "/images/thumbs/4.3.jpg", "label": "The Drain" }
+      ]
+    },
+    {
+      "id": "5",
+      "slug": "smoking",
+      "seriesId": "series-2",
+      "title": "Smoking",
+      "tagline": "It does not add calm. It drills a hole and sells you the filling — the purest need a substance ever built for itself.",
+      "status": "Complete",
+      "pageCount": 4,
+      "nodes": [
+        { "image": "/images/thumbs/5.1.jpg", "label": "The Hole" },
+        { "image": "/images/thumbs/5.2.jpg", "label": "The Calm" },
+        { "image": "/images/thumbs/5.3.jpg", "label": "The Loop" }
+      ]
+    },
+    {
+      "id": "6",
       "slug": "liquid-courage",
       "seriesId": "series-2",
       "title": "Alcohol",
       "tagline": "The anti-agency drug — the alibi you buy in advance, and the refuge that teaches you to run.",
       "status": "Complete",
-      "pageCount": 3,
+      "pageCount": 4,
       "nodes": [
-        { "image": "/images/thumbs/4.1.jpg", "label": "Alcohol" },
-        { "image": "/images/thumbs/4.2.jpg", "label": "The Alibi" },
-        { "image": "/images/thumbs/4.3.jpg", "label": "The Refuge" }
+        { "image": "/images/thumbs/6.1.jpg", "label": "Alcohol" },
+        { "image": "/images/thumbs/6.2.jpg", "label": "The Alibi" },
+        { "image": "/images/thumbs/6.3.jpg", "label": "The Refuge" }
       ]
     },
     {
-      "id": "5",
+      "id": "7",
       "slug": "sugar",
       "seriesId": "series-2",
       "title": "Sugar",
       "tagline": "The pleasure arrives upfront; the cost is sent to an address you never check — including the quiet window when your immune first-responders go sluggish.",
       "status": "Complete",
-      "pageCount": 3,
+      "pageCount": 4,
       "nodes": [
-        { "image": "/images/thumbs/5.1.jpg", "label": "Sugar" },
-        { "image": "/images/thumbs/5.2.jpg", "label": "The Guard" },
-        { "image": "/images/thumbs/5.3.jpg", "label": "No Receipt" }
+        { "image": "/images/thumbs/7.1.jpg", "label": "Sugar" },
+        { "image": "/images/thumbs/7.2.jpg", "label": "The Guard" },
+        { "image": "/images/thumbs/7.3.jpg", "label": "No Receipt" }
       ]
     },
     {
-      "id": "6",
+      "id": "8",
       "slug": "first-light",
       "seriesId": "series-2",
       "title": "Sleep",
       "tagline": "Forget the hour-quota no one can actually measure — the real lever is whether you rise to claim the day, or wait to be told what it will be.",
       "status": "Complete",
-      "pageCount": 3,
+      "pageCount": 4,
       "nodes": [
-        { "image": "/images/thumbs/6.1.jpg", "label": "Sleep" },
-        { "image": "/images/thumbs/6.2.jpg", "label": "The Number" },
-        { "image": "/images/thumbs/6.3.jpg", "label": "The Claim" }
+        { "image": "/images/thumbs/8.1.jpg", "label": "Sleep" },
+        { "image": "/images/thumbs/8.2.jpg", "label": "The Number" },
+        { "image": "/images/thumbs/8.3.jpg", "label": "The Claim" }
       ]
     },
     {
-      "id": "7",
+      "id": "9",
       "slug": "the-bottomless-bowl",
       "seriesId": "series-3",
       "title": "The Bottomless Bowl",
@@ -119,13 +147,13 @@
       "status": "Complete",
       "pageCount": 3,
       "nodes": [
-        { "image": "/images/thumbs/7.1.jpg", "label": "The Bowl" },
-        { "image": "/images/thumbs/7.2.jpg", "label": "The Chase" },
-        { "image": "/images/thumbs/7.3.jpg", "label": "The Ledger" }
+        { "image": "/images/thumbs/9.1.jpg", "label": "The Bowl" },
+        { "image": "/images/thumbs/9.2.jpg", "label": "The Chase" },
+        { "image": "/images/thumbs/9.3.jpg", "label": "The Ledger" }
       ]
     },
     {
-      "id": "8",
+      "id": "10",
       "slug": "the-counterfeit",
       "seriesId": "series-3",
       "title": "The Counterfeit",
@@ -133,13 +161,13 @@
       "status": "Complete",
       "pageCount": 3,
       "nodes": [
-        { "image": "/images/thumbs/8.1.jpg", "label": "The Lid" },
-        { "image": "/images/thumbs/8.2.jpg", "label": "The Bar" },
-        { "image": "/images/thumbs/8.3.jpg", "label": "The Lens" }
+        { "image": "/images/thumbs/10.1.jpg", "label": "The Lid" },
+        { "image": "/images/thumbs/10.2.jpg", "label": "The Bar" },
+        { "image": "/images/thumbs/10.3.jpg", "label": "The Lens" }
       ]
     },
     {
-      "id": "9",
+      "id": "11",
       "slug": "gratitude",
       "seriesId": "series-3",
       "title": "Gratitude",
@@ -147,13 +175,13 @@
       "status": "Complete",
       "pageCount": 3,
       "nodes": [
-        { "image": "/images/thumbs/9.1.jpg", "label": "The Move" },
-        { "image": "/images/thumbs/9.2.jpg", "label": "Overflow" },
-        { "image": "/images/thumbs/9.3.jpg", "label": "The Bowl" }
+        { "image": "/images/thumbs/11.1.jpg", "label": "The Move" },
+        { "image": "/images/thumbs/11.2.jpg", "label": "Overflow" },
+        { "image": "/images/thumbs/11.3.jpg", "label": "The Bowl" }
       ]
     },
     {
-      "id": "10",
+      "id": "12",
       "slug": "underinvestment",
       "seriesId": "series-4",
       "title": "Underinvestment",
@@ -161,13 +189,13 @@
       "status": "Complete",
       "pageCount": 3,
       "nodes": [
-        { "image": "/images/thumbs/10.1.jpg", "label": "The Stranger" },
-        { "image": "/images/thumbs/10.2.jpg", "label": "The Bill" },
-        { "image": "/images/thumbs/10.3.jpg", "label": "The Bridge" }
+        { "image": "/images/thumbs/12.1.jpg", "label": "The Stranger" },
+        { "image": "/images/thumbs/12.2.jpg", "label": "The Bill" },
+        { "image": "/images/thumbs/12.3.jpg", "label": "The Bridge" }
       ]
     },
     {
-      "id": "11",
+      "id": "13",
       "slug": "overinvestment",
       "seriesId": "series-4",
       "title": "Overinvestment",
@@ -175,9 +203,9 @@
       "status": "Complete",
       "pageCount": 3,
       "nodes": [
-        { "image": "/images/thumbs/11.1.jpg", "label": "The Blueprint" },
-        { "image": "/images/thumbs/11.2.jpg", "label": "The Prison" },
-        { "image": "/images/thumbs/11.3.jpg", "label": "The Open Hand" }
+        { "image": "/images/thumbs/13.1.jpg", "label": "The Blueprint" },
+        { "image": "/images/thumbs/13.2.jpg", "label": "The Prison" },
+        { "image": "/images/thumbs/13.3.jpg", "label": "The Open Hand" }
       ]
     }
   ]

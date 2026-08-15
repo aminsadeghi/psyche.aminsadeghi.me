@@ -31,6 +31,77 @@
         }
       ]
     },
+    "minerals": {
+      "pages": [
+        {
+          "page": 1,
+          "slug": "the-elements",
+          "title": "The Elements",
+          "date": "15/08/2026",
+          "edited": "15/08/2026",
+          "description": "Pull the mind apart far enough and you do not find thoughts — you find chemistry, some of it not even organic. You are, in part, a mineral, and the level you cannot feel is quietly setting the mood.",
+          "content": "<p>Pull the mind apart far enough and you do not find thoughts. You find <strong>chemistry</strong> — and some of it is not even organic. Beneath the mood, the focus, the steadiness or its absence, there is a short list of plain elements, the same ones found in rock and seawater, doing the work: <strong>magnesium, zinc, iron, calcium, selenium.</strong> You are, in part, a mineral.</p><p>This is easy to forget, because none of it announces itself. You feel <em>anxious,</em> not low in magnesium. You feel <em>flat,</em> not short on zinc. The felt self arrives already assembled, seamless, unmistakably you — and hides the fact that it is standing on a chemistry that can run thin. When a level drops, the self does not report a shortage. It simply changes, and calls the change a mood.</p><p>So the first thing to hold is uncomfortable and freeing at once: some of what you take to be <strong>your character</strong> — your temper, your nerve, your capacity to sit still inside a hard hour — is partly a supply question. Not all of it. But more of it than the seamless feeling of being yourself would ever admit.</p>"
+        },
+        {
+          "page": 2,
+          "slug": "the-list",
+          "title": "The List",
+          "date": "15/08/2026",
+          "edited": "15/08/2026",
+          "description": "The list is shorter than the mystery suggests: six thousand minerals in the earth, about sixteen in you. Traces, but not optional — the mind is not fed by the amount, it is gated by the presence.",
+          "content": "<p>The list is shorter than the mystery suggests. Geologists count more than <strong>six thousand</strong> minerals in the earth; your body requires about <strong>sixteen.</strong> That is the whole ledger the mind runs on.</p><p>Seven are needed in bulk — the <strong>macrominerals:</strong> calcium, phosphorus, potassium, sodium, chloride, sulfur, and <strong>magnesium,</strong> the quiet workhorse that stands as cofactor to more than three hundred separate reactions in you. The other nine are wanted only in traces, which makes them no less decisive: <strong>iron</strong> carrying oxygen, <strong>zinc</strong> building and repairing, <strong>iodine</strong> and <strong>selenium</strong> running the thyroid, then copper, manganese, molybdenum, chromium, and fluoride out at the edges.</p><p>Traces, but not optional. A body missing a few milligrams of the right element does not run a little slower; it runs <em>wrong</em> — the enzyme that needed that one atom simply stops, and whatever it was doing for your mood or your nerve stops with it. The mind is not fed by the amount. It is <strong>gated by the presence.</strong> Sixteen switches, most of them small, and the whole apparatus depends on none of them being off.</p>"
+        },
+        {
+          "page": 3,
+          "slug": "the-drain",
+          "title": "The Drain",
+          "date": "15/08/2026",
+          "edited": "15/08/2026",
+          "description": "The list is not stable. Modern life spends these elements faster than a quiet body would — through the very things that feel like relief. And you cannot feel a mineral, so this is the one lever you must run on knowledge, not on feeling.",
+          "content": "<p>If the list were stable, this would be a closed subject. It is not. The trouble with modern life is not only that it feeds these elements in poorly; it is that it <strong>spends them faster</strong> than a quiet body would — and spends them through the very things that feel like relief.</p><p>Stress alone drains magnesium: the alarmed body dumps it into the urine, then, running low, alarms more easily, and dumps again. Onto that base the age lays its habits, and each takes its own cut from the ledger. The cigarette pulls zinc and selenium. The evening's drink strips magnesium and potassium overnight. The sugar burns magnesium to process itself. None of these announces a mineral loss. Each announces only a <strong>mood</strong> — tired, wired, flat — while the level quietly falls beneath it.</p><p>Which is the whole problem, and the whole instruction. <strong>You cannot feel a mineral.</strong> There is no sensation that reports the tank is low; there is only the changed self that low produces, wearing the mask of character. So this is one lever you cannot run on feeling. You have to run it on <strong>knowledge</strong> — to reason about what a given day is taking out, because the day will never tell you. The cases that follow are that accounting: what the cigarette, the drink, the sugar are each quietly withdrawing, and sending, as ever, to an address you were never going to check.</p>"
+        }
+      ]
+    },
+    "smoking": {
+      "pages": [
+        {
+          "page": 1,
+          "slug": "the-hole",
+          "title": "The Hole",
+          "date": "15/08/2026",
+          "edited": "15/08/2026",
+          "description": "Set aside the lung and the long odds. Nicotine does not lift you above where you started — it digs a small deficit and the next cigarette merely fills it. The relief is real, but it is relief of a wound the drug installed.",
+          "content": "<p>Set aside, for once, the lung and the long odds. There is something stranger in the cigarette than its damage, and it is a lesson about wanting that nothing else teaches quite so cleanly.</p><p>Watch what nicotine actually does. It arrives, lifts you briefly, and leaves — and as it leaves it opens a small deficit behind it, a low, restless flatness that was not there an hour ago. The next cigarette does not carry you above where you began the day. It closes the deficit the last one dug. You are not climbing. You are refilling a hole that the previous fill created.</p><p>This is the trick at the centre of it. The relief is <strong>real</strong> — the smoker is not imagining the ease that comes with the first draw. But it is relief of a discomfort the drug itself installed. Take the substance away entirely and the discomfort it soothes goes with it. You are being sold water by the one who made you thirsty.</p>"
+        },
+        {
+          "page": 2,
+          "slug": "counterfeit-calm",
+          "title": "The Counterfeit Calm",
+          "date": "15/08/2026",
+          "edited": "15/08/2026",
+          "description": "The deficit sits just below your baseline, so closing it feels like rising — and the mind, which reads changes not levels, files the rise as pleasure. The smoker is not weak; they are solving a problem the cigarette invented.",
+          "content": "<p>Now the part that makes it stick. Because the deficit sits just below your baseline, closing it feels like <strong>rising</strong> — and the mind, which reads changes and not levels, files that rise as <em>pleasure.</em> The cigarette gives you nothing but your own ordinary state handed back, and you experience the handing-back as a gift.</p><p>This is why the smoker is not weak, and why calling them weak misses everything. They are solving a real problem, competently, on schedule. The problem is simply one the cigarette invented and keeps reinventing — a thirst manufactured precisely so that the seller is always on hand with the cup. What looks like a pleasure indulged is a <strong>debt serviced,</strong> and the debt was issued by the thing that appears to relieve it.</p><p>It is the same machinery the mind runs everywhere, only here it is <strong>pure,</strong> stripped to the wire: a wanting that is not reaching for something good but merely fleeing a hole, and mistaking the flight for enjoyment. Once you see it in the cigarette, you begin to see it in a dozen quieter places.</p>"
+        },
+        {
+          "page": 3,
+          "slug": "the-loop",
+          "title": "The Loop",
+          "date": "15/08/2026",
+          "edited": "15/08/2026",
+          "description": "Quitting is framed as giving up a pleasure — but there was never a pleasure, only a hole and a filling in a loop. You are not out-muscling a craving; you are closing the factory that manufactures it.",
+          "content": "<p>See it clearly and the usual framing collapses. Quitting is described as <strong>giving something up</strong> — surrendering a pleasure, enduring a loss, white-knuckling past a thing you love. But there was never a pleasure to surrender. There was a hole and a filling, running in a loop, and the loop presented its own maintenance as a reward.</p><p>So the task is not to out-muscle a craving. Willpower framed as loss will lose, because it is fighting to keep you from something you believe you want. The move is to stop believing the wanting. What the last cigarette actually costs you is not a joy but a <strong>job</strong> — the standing obligation to keep patching a deficit that exists only because you keep patching it. End the patching, ride out the closing of the final hole, and the need does not have to be resisted forever. It is simply <strong>gone,</strong> because the thing that generated it is.</p><p>That is the whole liberation, and it is quieter than the struggle it replaces: not a lifelong war against a pull, but the plain recognition that the pull was manufactured — and the factory can be closed.</p>"
+        },
+        {
+          "page": 4,
+          "slug": "the-mineral-bill",
+          "title": "The Mineral Bill",
+          "date": "15/08/2026",
+          "edited": "15/08/2026",
+          "description": "Beneath the manufactured need, a real subtraction. Cadmium in the smoke shoulders zinc out of its enzymes; the free radicals burn zinc and selenium defending against them; nicotine cuts calcium; the stress dumps magnesium.",
+          "content": "<p>And beneath the manufactured need, a real subtraction. Whatever the mind is doing with the cigarette, the body is paying for it in the plainest currency there is — the short list of elements from the minerals file — and paying faster than an unsmoked day would.</p><p><strong>Zinc</strong> goes first and hardest. Cigarette smoke carries <strong>cadmium,</strong> a heavy metal that rides zinc's own transport routes and shoulders it out of the enzymes that needed it, forcing it toward the exit. At the same time every puff floods the body with free radicals, and the zinc-dependent antioxidant machinery runs in overdrive to mop them up — spending zinc to defend against the smoke that carries the cadmium that spends the zinc.</p><p><strong>Selenium</strong> follows, drained building the lung's master antioxidant against the same assault. <strong>Calcium</strong> loses ground as nicotine and carbon monoxide cut its absorption in the gut. <strong>Magnesium</strong> drops on the stress the habit keeps raising. (The single fastest loss is not even a mineral but <strong>vitamin&nbsp;C,</strong> burned by the tens of milligrams a day to neutralise the smoke.) None of it is felt. The pack takes zinc, selenium, calcium, magnesium — quietly, daily — and hands you back only the closing of a hole.</p>"
+        }
+      ]
+    },
     "liquid-courage": {
       "pages": [
         {
@@ -59,6 +130,15 @@
           "edited": "09/08/2026",
           "description": "The long game: the cage you can pour. Every escape rehearses your own helplessness until running is the only move left — and sobriety becomes refusing to sign away the pen.",
           "content": "<p>The long game is quieter, and does far more damage. The Cage described how a life flees the exposed, uncertain work of living back into something comfortable and known. Alcohol is the version of that cage you can <strong>pour</strong> — a door out of any hard feeling, carried in a bottle, opening the moment the feeling arrives. Anxious, lonely, bored, ashamed, grieving: whatever the weather, there is a reliable exit, and it answers on demand.</p><p>But the problem you were feeling does not shrink while you are gone; you only go <strong>number.</strong> It is waiting, the same size, when you surface. And here is the trap that closes slowly, across years: every time you take the exit, you teach yourself two things — that the feeling is <strong>unbearable,</strong> and that you cannot meet it as yourself. You are not just avoiding a bad night; you are <strong>rehearsing your own helplessness,</strong> practising it until the muscle that faces hard things without an anaesthetic quietly wastes away. Eventually you have not solved a single problem you drank at. You have only trained yourself into someone who <strong>runs.</strong></p><p>So none of this was ever really about the substance. It is that <strong>agency is authorship of your response</strong> — and alcohol is the one purchase engineered to delete the author: first for a night, then as a habit, then as a self. Every glass is a small vote to not be the one who chose.</p><p>The freest, hardest thing you can do standing at the bar is to <strong>want the very feeling you were about to drown — and keep it.</strong> Not because there is virtue in suffering, but because that feeling is the field — and the field is the only place your life was ever going to happen.</p>"
+        },
+        {
+          "page": 4,
+          "slug": "overnight-withdrawal",
+          "title": "The Overnight Withdrawal",
+          "date": "15/08/2026",
+          "edited": "15/08/2026",
+          "description": "Beneath the alibi, a withdrawal of the kind a bank makes. Alcohol opens the kidney's taps and lets magnesium, potassium, sodium and zinc run out overnight — so the frayed morning is not only the drug leaving, but the shortage it left behind.",
+          "content": "<p>Beneath the alibi, a second withdrawal — the kind a bank makes. Alcohol does not merely blur the mind for a night; it opens the body's taps and lets its minerals run out while you sleep, so that the flat, frayed morning is not only the drug leaving. It is the <strong>shortage it left behind.</strong></p><p>The kidney is where most of it goes. Within minutes of the blood rising, alcohol reaches the fine tubes meant to reabsorb <strong>magnesium</strong> and orders them to let it pass instead — dumped, straight out, through the night. It blocks the hormone that tells the body to hold water, so you wake having flushed <strong>potassium</strong> and <strong>sodium</strong> along with it, which is much of what the next-day cramp, fog, and palpitation actually are. <strong>Zinc</strong> follows, spent by the very enzyme that breaks the alcohol down and then chased out in the urine. <strong>Calcium</strong> and phosphorus slip too, as the glands that guard them are briefly hushed.</p><p>So the evening drinker wakes not just poisoned but <strong>poorer</strong> — magnesium, potassium, zinc, calcium all a little lower than the night before, and the mood that sits on them lower with it. (The other famous casualty is not a mineral but <strong>thiamine,</strong> vitamin&nbsp;B1, burned in quantity to process the ethanol — its loss the one behind the gravest damage of all.) The refuge charges rent, and it takes it in elements, overnight, from an account you cannot feel.</p>"
         }
       ]
     },
@@ -90,6 +170,15 @@
           "edited": "10/08/2026",
           "description": "The window is real, brief, and completely invisible — so the cost is never attributed. Sugar's deepest trick is that agency cannot act on a consequence it cannot perceive.",
           "content": "<p>Now put the two facts together, and the trap closes. The window is brief, and it is <strong>completely invisible.</strong> You do not feel your neutrophils slow. There is no symptom, no signal, no sensation of a lowered guard — as far as your awareness is concerned, <strong>nothing happened at all.</strong></p><p>So if, some days later, an infection that might have been met at the gate instead gets a foothold and you come down with something, you will reach for a cause — and the one thing you will never reach for is the cake. Perhaps it played a part; perhaps it did not. You cannot know, and <strong>that is exactly the point.</strong> The sugar and the sickness sit too far apart in time, and the mechanism between them was never available to your senses, so the mind — which can only connect what it can perceive — never even puts the two in the same room to ask.</p><p>That is sugar's real trick, and it runs deeper than any craving. Its companion piece in this series, on food, named the cost you <em>feel and misread</em> — the crash you mistake for a mood. This is the other half: the cost you <strong>never feel at all.</strong> And it names the hardest discipline the body asks of you — not to resist what tastes good, but to take seriously the <strong>consequences that arrive without a receipt.</strong> The inputs that shape you most are the ones you never catch in the act.</p>"
+        },
+        {
+          "page": 4,
+          "slug": "the-cofactor-tax",
+          "title": "The Cofactor Tax",
+          "date": "15/08/2026",
+          "edited": "15/08/2026",
+          "description": "Sugar sends its bill in minerals too, by a quieter route than theft: burning glucose is not free, and every molecule of it conscripts magnesium to move it through — the same magnesium the nerves needed to stay level.",
+          "content": "<p>Sugar sends its bill in minerals too, though by a quieter route than theft. It does not flush them out; it <strong>spends</strong> them — because burning sugar is not free, and the body pays the toll in the very elements the mind depends on.</p><p>Every molecule of glucose you process requires <strong>magnesium</strong> as a cofactor to move it through the machinery. A little sugar, a little magnesium; a steady flood of it, a steady draw on a reserve already thinned by stress and drink — the same magnesium the nerves needed to stay level, quietly conscripted to metabolise the sweetness. <strong>Chromium,</strong> the trace element that sharpens insulin's hand, is drawn down the same way, called on with every spike to help usher the glucose in.</p><p>It is subtler than the cigarette's cadmium or the drink's flushed kidney, and the science is softer — hold it more loosely than the rest. But the direction is not in doubt: the pleasure that arrives upfront is <strong>metabolised on credit,</strong> and part of what settles the account is the magnesium your steadiness was running on. One more cost, sent as ever to the address you never check.</p>"
         }
       ]
     },
@@ -117,10 +206,19 @@
           "page": 3,
           "slug": "the-claim",
           "title": "The Claim",
-          "date": "14/08/2026",
-          "edited": "14/08/2026",
+          "date": "15/08/2026",
+          "edited": "15/08/2026",
           "description": "The half the evidence cannot reach: the claim itself. The stance towards the morning is not a time on the clock but an act of authorship — won the night before, in the plain decision to end the day — and it compounds into a life a step ahead of its days.",
           "content": "<p>Return, then, to the half the evidence cannot reach. The facts of the last page loosen the number and free the clock; they say nothing about the <strong>stance</strong> — and the stance was always the point. Two people wake having slept the same hours into the same grey light. One is claimed by the day; the other claims it. Nothing in the night divides them. Everything in the life does.</p><p>Be careful, though, not to hear <em>the claim</em> as a smuggled version of the very number we just discarded — rise at five, win at life. It is not a time on the clock. The lark and the owl can each claim a day or surrender one; the biology sets the hour, but the <strong>authorship</strong> is not in the hour. What the claim refuses is a way of meeting the morning: the reactive wake that reaches first for the phone and lets the world set the terms before the feet are down, so the day arrives already spent and you pass the rest of it answering. To claim is to take the first stretch of the morning while it still belongs to no one, and in taking it, to decide the day is a thing you author rather than a thing that happens to you.</p><p>And notice where the claim is truly won. Not at dawn — the morning only collects a debt already settled. It is won the night before, in the plainest act of will there is: <strong>choosing to end the day.</strong> Not letting it bleed, hour upon hour, into a small-hours nothing that quietly robs the morning in advance, but closing it — deciding the day is finished, and the next one worth being awake for. The lever was never the alarm. It is the decision, hours earlier, to stop.</p><p>And it compounds. One morning claimed makes the next easier to take; one hour held seeds the hour behind it; and across months the two lives that began identical in the dark pull visibly apart — one always a step ahead of its days, the other always a step behind them. So take the morning, and take it less for the hour it adds than for the <strong>stance</strong> it rehearses: that your life is authored, not merely undergone. The day was always going to arrive. The only question is whether it finds you already standing in it, having decided it is yours.</p>"
+        },
+        {
+          "page": 4,
+          "slug": "the-shared-deficit",
+          "title": "The Shared Deficit",
+          "date": "15/08/2026",
+          "edited": "15/08/2026",
+          "description": "The honest one: sleep does not strip minerals the way the cigarette and the drink do. It runs a loop with magnesium — a short night raises the stress that spills it, and low magnesium makes the next night shallower still.",
+          "content": "<p>Sleep is the odd one in this accounting, and honesty requires saying so. The cigarette and the drink actively strip minerals out; short sleep does something looser and more circular. It does not so much <strong>burn</strong> the elements as get burned by their absence — and then deepen it.</p><p>The link runs mostly through <strong>magnesium.</strong> A short night leaves the body a little more alarmed the next day — higher cortisol, higher sympathetic tone — and that alarmed state spills magnesium into the urine, the same way plain stress does. But magnesium is also part of what lets the nervous system stand down into sleep in the first place. So the two feed each other: too little sleep lowers magnesium, and low magnesium makes the next night's sleep shallower still. A loop, turning quietly, each end tightening the other.</p><p>Which is why this case never turned on a mineral, and does not turn on one now. The lever for sleep was never a supplement; it was the <strong>claim</strong> — the stance towards the morning, won the night before. But it is worth knowing the loop is there: that the frayed, reactive morning has a chemistry beneath it as well as a posture, and the two pull in the same direction. Close the night on time, and you are not only taking the day. You are letting the level recover.</p>"
         }
       ]
     }
