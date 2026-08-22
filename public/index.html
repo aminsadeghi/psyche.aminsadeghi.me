@@ -727,7 +727,15 @@
                     
                     const savedScroll = localStorage.getItem('menuScrollPos');
                     if (savedScroll) {
-                        document.querySelector('.left-panel').scrollTop = parseInt(savedScroll, 10);
+                        const leftPanel = document.querySelector('.left-panel');
+                        const y = parseInt(savedScroll, 10);
+                        // iOS Safari finishes laying out (and may reset) the menu
+                        // AFTER this tick, so apply the restore on the next frame(s)
+                        // rather than synchronously — otherwise it snaps back to top.
+                        requestAnimationFrame(() => {
+                            leftPanel.scrollTop = y;
+                            requestAnimationFrame(() => { leftPanel.scrollTop = y; });
+                        });
                     }
                 }
             } catch (error) {
@@ -739,12 +747,27 @@
         // Start the app
         init();
 
-        window.addEventListener('beforeunload', () => {
+        // Persist the left-menu scroll position. iOS Safari fires 'beforeunload'
+        // unreliably (usually never), so the position was being lost on iPad. Save
+        // continuously as the user scrolls (debounced) and on the events iOS DOES
+        // fire when leaving/backgrounding a page — 'pagehide' and visibility→hidden.
+        (function () {
             const leftPanel = document.querySelector('.left-panel');
-            if (leftPanel) {
-                localStorage.setItem('menuScrollPos', leftPanel.scrollTop);
-            }
-        });
+            if (!leftPanel) return;
+            const saveScroll = () => {
+                try { localStorage.setItem('menuScrollPos', leftPanel.scrollTop); } catch (e) {}
+            };
+            let t;
+            leftPanel.addEventListener('scroll', () => {
+                clearTimeout(t);
+                t = setTimeout(saveScroll, 100);
+            }, { passive: true });
+            window.addEventListener('pagehide', saveScroll);
+            window.addEventListener('beforeunload', saveScroll);
+            document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState === 'hidden') saveScroll();
+            });
+        })();
     </script>
 
     <!-- The Three Worlds — shared collection menu (see PROJECT-SCOPE.md) -->
