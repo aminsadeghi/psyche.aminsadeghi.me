@@ -629,7 +629,7 @@
                 // Securely extract the series number (e.g., converts 'series-1' or '1' to just '1')
                 const seriesMatch = seriesInfo.id.match(/\d+/);
                 const seriesNum = seriesMatch ? seriesMatch[0] : seriesInfo.id.replace('series-', '');
-                const newVidSrc = `/video/series-${seriesNum}.mp4`;
+                const newVidSrc = `https://psyche.aminsadeghi.me/the-psyche/video/series-${seriesNum}.mp4`;
 
                 // Only reload if the series has actually changed
                 if (bgVideo.getAttribute('src') !== newVidSrc) {
