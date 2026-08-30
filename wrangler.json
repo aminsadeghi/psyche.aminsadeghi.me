@@ -8,6 +8,10 @@
     "binding": "ASSETS"
   },
 
+  "r2_buckets": [
+    { "binding": "MEDIA", "bucket_name": "aminsadeghi-me-r2" }
+  ],
+
   "routes": [
     { "pattern": "psyche.aminsadeghi.me", "custom_domain": true }
   ]

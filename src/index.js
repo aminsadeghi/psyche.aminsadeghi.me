@@ -7,6 +7,37 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname;
 
+    // --- R2 MEDIA: stream this site's own /the-psyche/* straight from the
+    //     aminsadeghi-me-r2 bucket (same-origin, no external CDN request). ---
+    if (path.startsWith('/the-psyche/')) {
+      const key = decodeURIComponent(path.slice(1));
+      const rangeHeader = request.headers.get('range');
+      let range;
+      if (rangeHeader) {
+        const m = /^bytes=(\d*)-(\d*)$/.exec(rangeHeader.trim());
+        if (m && (m[1] || m[2])) {
+          if (m[1] && m[2]) range = { offset: +m[1], length: +m[2] - +m[1] + 1 };
+          else if (m[1]) range = { offset: +m[1] };
+          else range = { suffix: +m[2] };
+        }
+      }
+      const object = await env.MEDIA.get(key, range ? { range } : undefined);
+      if (!object) return new Response('Not Found', { status: 404 });
+      const headers = new Headers();
+      object.writeHttpMetadata(headers);
+      headers.set('etag', object.httpEtag);
+      headers.set('Accept-Ranges', 'bytes');
+      headers.set('Cache-Control', 'public, max-age=3600');
+      if (range) {
+        const size = object.size;
+        const off = ('suffix' in range) ? size - range.suffix : range.offset;
+        const len = ('suffix' in range) ? range.suffix : (range.length ?? (size - off));
+        headers.set('Content-Range', `bytes ${off}-${off + len - 1}/${size}`);
+        return new Response(object.body, { status: 206, headers });
+      }
+      return new Response(object.body, { status: 200, headers });
+    }
+
     // --- 1. DYNAMIC SITEMAP GENERATOR ---
     if (path === '/sitemap.xml') {
       try {
