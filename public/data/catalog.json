@@ -59,7 +59,7 @@
       "slug": "you-are-what-you-eat",
       "seriesId": "series-2",
       "title": "You Are What You Eat",
-      "tagline": "Your thoughts feel like you — but some are just chemistry, and you're holding the spoon.",
+      "tagline": "Your thoughts feel authored by you — but on this front chemistry holds the pen, and the fork is how you take it back.",
       "status": "Complete",
       "pageCount": 3,
       "nodes": [
@@ -115,12 +115,12 @@
       "slug": "sugar",
       "seriesId": "series-2",
       "title": "Sugar",
-      "tagline": "The pleasure arrives upfront; the cost is sent to an address you never check — including the quiet window when your immune first-responders go sluggish.",
+      "tagline": "The pleasure arrives upfront; the cost is posted to an address you never check — like the slow caramelising of the very machine you live in, which you never feel.",
       "status": "Complete",
       "pageCount": 4,
       "nodes": [
         { "image": "/the-psyche/images/thumbs/7.1.jpg", "label": "Sugar" },
-        { "image": "/the-psyche/images/thumbs/7.2.jpg", "label": "The Guard" },
+        { "image": "/the-psyche/images/thumbs/7.2.jpg", "label": "The Caramel" },
         { "image": "/the-psyche/images/thumbs/7.3.jpg", "label": "No Receipt" }
       ]
     },
@@ -129,7 +129,7 @@
       "slug": "first-light",
       "seriesId": "series-2",
       "title": "Sleep",
-      "tagline": "Forget the hour-quota no one can actually measure — the real lever is whether you rise to claim the day, or wait to be told what it will be.",
+      "tagline": "Forget the eight-hour law sold past its evidence — the real lever is whether you rise to claim the day, or wait to be told what it will be.",
       "status": "Complete",
       "pageCount": 4,
       "nodes": [
