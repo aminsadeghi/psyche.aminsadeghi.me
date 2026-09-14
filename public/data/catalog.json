@@ -1,6 +1,12 @@
 {
   "series": [
     {
+      "id": "prologue",
+      "title": "Prologue",
+      "subtitle": "The Threshold",
+      "file": "prologue.json"
+    },
+    {
       "id": "series-1",
       "title": "Series I",
       "subtitle": "The Foundations",
@@ -26,6 +32,20 @@
     }
   ],
   "cases": [
+    {
+      "id": "0",
+      "slug": "the-thin-ice",
+      "seriesId": "prologue",
+      "title": "The Thin Ice",
+      "tagline": "You didn't visit those myths — you recognised them, because they were made of you. But a myth is thin ice: a bright surface you can cross, or build on and live on until it takes your full weight and gives way. Two heroes show you the water underneath — then the way onto solid ground.",
+      "status": "Complete",
+      "pageCount": 3,
+      "nodes": [
+        { "image": "/the-psyche/images/thumbs/0.1.jpg", "label": "The Mirror" },
+        { "image": "/the-psyche/images/thumbs/0.2.jpg", "label": "The Two Rooms" },
+        { "image": "/the-psyche/images/thumbs/0.3.jpg", "label": "Solid Ground" }
+      ]
+    },
     {
       "id": "1",
       "slug": "the-self-esteem-scoreboard",
