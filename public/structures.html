@@ -7,6 +7,10 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="description" content="The Structures — canonical maps of the psyche, and the model The Psyche is built on.">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -24,41 +28,31 @@
     overflow: hidden;
   }
 
-  /* Top bar */
-  .st-topbar {
-    position: fixed; top: 0; left: 0; right: 0; height: 58px; z-index: 40;
-    display: flex; align-items: center; gap: 16px;
-    padding: 0 22px;
-    background: rgba(5, 14, 27, 0.72);
-    border-bottom: 1px solid rgba(197, 160, 89, 0.16);
-    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  /* Close pill (top-right) — the shared Mythos pattern: bordered mono pill, a link home. */
+  .st-close {
+    position: absolute; top: 22px; right: 44px; z-index: 40;
+    display: flex; align-items: center; gap: 12px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.24em;
+    color: #9AA1A9; background: none; border: 1px solid rgba(197, 160, 89, 0.35);
+    padding: 9px 16px; cursor: pointer; text-decoration: none;
+    transition: border-color .2s ease, color .2s ease;
   }
-  .st-back {
-    display: inline-flex; align-items: center; gap: 8px;
-    color: #d4b26a; text-decoration: none;
-    font-size: 11px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase;
-    padding: 8px 14px; border: 1px solid rgba(197, 160, 89, 0.4); border-radius: 999px;
-    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-  }
-  .st-back:hover { background: rgba(197, 160, 89, 0.16); color: #fff; border-color: #c5a059; }
-  .st-brand { display: flex; flex-direction: column; line-height: 1.2; }
-  .st-brand b { font-family: "Times New Roman", Times, serif; font-weight: normal; color: #fff; font-size: 16px; }
-  .st-brand span { color: #c5a059; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; }
+  .st-close .cs-x { color: #C5A059; }
+  .st-close:hover { border-color: #C5A059; color: #F2EEE6; }
 
-  /* Shell: rail + main */
-  .st-shell { position: fixed; inset: 58px 0 0 0; display: flex; }
+  /* Shell: rail + main, full viewport */
+  .st-shell { position: fixed; inset: 0; display: flex; }
 
   .st-rail {
     flex: 0 0 clamp(230px, 26%, 300px);
     border-right: 1px solid rgba(197, 160, 89, 0.14);
     background: rgba(10, 15, 25, 0.4);
     overflow-y: auto;
-    padding: 20px 0;
+    padding: 26px 0 40px;
   }
-  .st-rail-heading {
-    font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
-    color: #64748b; padding: 8px 24px 12px;
-  }
+  .st-rail-head { padding: 4px 24px 18px; }
+  .st-rail-title { font-family: "Times New Roman", Times, serif; font-size: 26px; color: #fff; line-height: 1; }
+  .st-rail-sub { color: #c5a059; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; margin-top: 6px; }
   .rail-item {
     display: flex; flex-direction: column; gap: 3px;
     width: 100%; text-align: left; background: none; border: none;
@@ -73,7 +67,7 @@
   .rail-kicker { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #64748b; }
 
   /* Main */
-  .st-main { flex: 1 1 auto; overflow-y: auto; padding: 46px 56px 80px; }
+  .st-main { flex: 1 1 auto; overflow-y: auto; padding: 74px 56px 80px; }
   .st-rail::-webkit-scrollbar, .st-main::-webkit-scrollbar { width: 8px; }
   .st-rail::-webkit-scrollbar-thumb, .st-main::-webkit-scrollbar-thumb { background: rgba(197, 160, 89, 0.3); border-radius: 4px; }
 
@@ -103,14 +97,16 @@
 
   @media (max-width: 800px) {
     body { overflow: auto; }
-    .st-shell { position: static; inset: auto; flex-direction: column; margin-top: 58px; }
+    .st-close { position: fixed; top: 12px; right: 14px; padding: 7px 12px; }
+    .st-close span:first-child { display: none; }   /* icon-only on phones, like Mythos */
+    .st-shell { position: static; inset: auto; flex-direction: column; }
     .st-rail {
       flex: 0 0 auto; width: 100%;
       border-right: none; border-bottom: 1px solid rgba(197, 160, 89, 0.14);
-      display: flex; overflow-x: auto; padding: 12px;
+      display: flex; align-items: center; overflow-x: auto; padding: 12px 56px 12px 12px;
       -webkit-overflow-scrolling: touch;
     }
-    .st-rail-heading { display: none; }
+    .st-rail-head { display: none; }
     .rail-item {
       flex: 0 0 auto; width: auto; border-left: none;
       border: 1px solid rgba(197, 160, 89, 0.28); border-radius: 999px;
@@ -127,14 +123,14 @@
 </head>
 <body>
 
-<div class="st-topbar">
-  <a class="st-back" href="/index.html" aria-label="Back to The Psyche">&larr; The Psyche</a>
-  <div class="st-brand"><b>Structures</b><span>Maps of the Psyche</span></div>
-</div>
+<a class="st-close" href="/" aria-label="Return to The Psyche home"><span>CLOSE</span><span class="cs-x">&times;</span></a>
 
 <div class="st-shell">
   <nav class="st-rail" id="rail">
-    <div class="st-rail-heading">The Structures</div>
+    <div class="st-rail-head">
+      <div class="st-rail-title">Structures</div>
+      <div class="st-rail-sub">Maps of the Psyche</div>
+    </div>
     <div id="rail-list"><!-- injected --></div>
   </nav>
   <main class="st-main" id="main"><!-- injected --></main>

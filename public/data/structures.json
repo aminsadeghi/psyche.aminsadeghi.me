@@ -1,5 +1,5 @@
 {
-  "note": "Source of truth for the Structures page (structures.html) — the maps this site is built on, plus the canonical maps of the psyche. Each structure renders as a stack of labelled bands: form 'strata' = full-width bands; form 'pyramid' = bands that widen toward the base (so write the base LAST). 'layers' are top-to-bottom as they should appear. Editorial prose — refine freely. Literal Unicode only, no HTML entities.",
+  "note": "Source of truth for the Structures page (structures.html) — the maps this site is built on, plus the canonical maps of the psyche. Each structure renders as a stack of labelled bands: form 'strata' = full-width bands; form 'pyramid' = bands that widen towards the base (so write the base LAST). 'layers' are top-to-bottom as they should appear. Editorial prose — refine freely. Literal Unicode only, no HTML entities.",
   "structures": [
     {
       "id": "curriculum",
@@ -22,7 +22,7 @@
       "form": "strata",
       "intro": "Not how the self was formed — that is the clinic's map — but what a strong one is built on, and the order of the work. Series I climbs this ladder from the ground up.",
       "layers": [
-        { "label": "Purpose", "note": "A why you can carry almost any how toward. Without it, no technique holds." },
+        { "label": "Purpose", "note": "A why you can carry almost any how towards. Without it, no technique holds." },
         { "label": "Discipline", "note": "Choosing what you want most over what you want now — and the first place it is physical: the fork, the night, the glass you do not buy. Motivation is a liar; acting anyway is freedom." },
         { "label": "Fear", "note": "Almost every flaw is fear in costume — shame, avoidance, the comfort of the known. Love and presence are not summoned; they are what remains when the fear leaves." },
         { "label": "Agency", "note": "Author, not victim. You do not choose the weather; you author the response — always. The keystone." },
@@ -103,7 +103,7 @@
       "name": "Jung's Model of the Psyche",
       "kicker": "From the mask to the Self",
       "form": "strata",
-      "intro": "Consciousness as a small lit circle inside a vast inherited dark. Individuation is the long work of moving from the outermost mask down toward the Self at the centre.",
+      "intro": "Consciousness as a small lit circle inside a vast inherited dark. Individuation is the long work of moving from the outermost mask down towards the Self at the centre.",
       "layers": [
         { "label": "Persona", "note": "The mask worn for the world — useful, until you mistake it for the whole of you." },
         { "label": "Ego", "note": "The centre of consciousness; the 'I' that knows itself." },
@@ -111,7 +111,7 @@
         { "label": "The Shadow", "note": "What the ego disowns — refused, and therefore where much of the power is kept." },
         { "label": "Anima / Animus", "note": "The contrasexual inner figure; the bridge from the ego down into the depths." },
         { "label": "Collective Unconscious", "note": "Inherited patterns shared across all people — the archetypes." },
-        { "label": "The Self", "note": "The centre and totality of the whole psyche; what individuation moves toward." }
+        { "label": "The Self", "note": "The centre and totality of the whole psyche; what individuation moves towards." }
       ],
       "caveat": "Read outer-to-inner: this is a depth gradient, not a ranking — the Self is the core, not the top."
     },
