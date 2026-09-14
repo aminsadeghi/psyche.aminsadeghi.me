@@ -1,20 +1,89 @@
 {
-  "note": "Source of truth for the Structures page (structures.html) — canonical maps of the psyche, plus this site's own model. Each structure renders as a stack of labelled bands: form 'strata' = full-width bands; form 'pyramid' = bands that widen toward the base. 'layers' are written top-to-bottom as they should appear. Editorial prose — refine freely. Literal Unicode only, no HTML entities.",
+  "note": "Source of truth for the Structures page (structures.html) — the maps this site is built on, plus the canonical maps of the psyche. Each structure renders as a stack of labelled bands: form 'strata' = full-width bands; form 'pyramid' = bands that widen toward the base (so write the base LAST). 'layers' are top-to-bottom as they should appear. Editorial prose — refine freely. Literal Unicode only, no HTML entities.",
   "structures": [
+    {
+      "id": "curriculum",
+      "name": "The Curriculum",
+      "kicker": "The whole site, as one map",
+      "form": "strata",
+      "intro": "The Psyche read as a single building — four storeys of the self, raised from the ground up. Each series is one floor; each case a room on it.",
+      "layers": [
+        { "label": "I · The Foundations", "note": "What a strong self is built on — worth, agency, fear, discipline, purpose. The character set, not the clinic's." },
+        { "label": "II · The Body", "note": "The self runs on a physical engine. A shortage or a crash does not announce itself as chemistry — it wears the mask of a mood." },
+        { "label": "III · The Wanting", "note": "Desire, scarcity, and the counterfeit cures — the bowl that gold cannot fill, and the gratitude that is really a lid." },
+        { "label": "IV · The Future Self", "note": "The stranger you keep mailing the bill to — the two opposite errors of under- and over-investing in who you will become." }
+      ],
+      "caveat": "A living outline: floors are added and reordered as the work grows. Read from the ground up — the higher rooms lean on the lower ones."
+    },
     {
       "id": "foundations",
       "name": "The Foundations of a Self",
-      "kicker": "This site's own model",
+      "kicker": "Series I · the character set",
       "form": "strata",
-      "intro": "Not how the self was formed — that is the clinic's map — but what a strong one is built on, and the order of the work. The Psyche's first series climbs this ladder from the ground up.",
+      "intro": "Not how the self was formed — that is the clinic's map — but what a strong one is built on, and the order of the work. Series I climbs this ladder from the ground up.",
       "layers": [
         { "label": "Purpose", "note": "A why you can carry almost any how toward. Without it, no technique holds." },
-        { "label": "Discipline", "note": "Choosing what you want most over what you want now. Motivation is a liar; acting anyway is freedom." },
-        { "label": "Fear", "note": "Almost every flaw is fear in costume. Love, openness and presence are what remain when it leaves." },
+        { "label": "Discipline", "note": "Choosing what you want most over what you want now — and the first place it is physical: the fork, the night, the glass you do not buy. Motivation is a liar; acting anyway is freedom." },
+        { "label": "Fear", "note": "Almost every flaw is fear in costume — shame, avoidance, the comfort of the known. Love and presence are not summoned; they are what remains when the fear leaves." },
         { "label": "Agency", "note": "Author, not victim. You do not choose the weather; you author the response — always. The keystone." },
         { "label": "Worth", "note": "Built, not handed out; non-contingent, owned outright. The ground everything else stands on." }
       ],
-      "caveat": "A curriculum, not a diagnosis. The order is deliberate — nothing above holds until Worth and Agency are under it."
+      "caveat": "A curriculum, not a diagnosis. The order is load-bearing — nothing above holds until Worth and Agency are under it."
+    },
+    {
+      "id": "locus",
+      "name": "The Locus of Control",
+      "kicker": "The Cage → the Open Field",
+      "form": "strata",
+      "intro": "A map of where you believe the steering wheel is. The Cage keeps three comfortable seats; the open field has none — and it is the only one of the four that is free.",
+      "layers": [
+        { "label": "The Blamer", "note": "The airtight case against the world. Every brick a true grievance — and the whole cell built of them. You can be right, or you can be free." },
+        { "label": "The Waiter", "note": "Abdication dressed as reverence: leaving it to fate or a sign to authorise the choice that was always yours. Not choosing is a choice." },
+        { "label": "The Performer", "note": "Enormous discipline, no agency. Top billing on a script written by other people — a very well-decorated cell." },
+        { "label": "The Author", "note": "Radical responsibility. Put down the alibi, pick up the pen, and face the actual weather. Exposed, unguaranteed, and real." }
+      ],
+      "caveat": "Fault is about the past; responsibility is about what you do next. You can carry a wound that was not your fault and still be the only one who can tend it."
+    },
+    {
+      "id": "two-hungers",
+      "name": "The Two Hungers",
+      "kicker": "Wanting is not liking",
+      "form": "strata",
+      "intro": "The brain keeps two systems, and they are not the same: the one that chases and the one that enjoys. Almost every craving lives in the gap between them.",
+      "layers": [
+        { "label": "Wanting", "note": "The 'go get it' pull — loud, forward-leaning, easily hijacked. It can run long after the pleasure is gone." },
+        { "label": "Liking", "note": "The actual payoff — quieter, smaller, quick to fade, and usually far less than the wanting promised." },
+        { "label": "The Gap", "note": "Where the trap is built. Engineered things widen it: maximal pull, minimal payoff — the cigarette's hole, the bottomless bowl, the bite made to be craved." },
+        { "label": "The Pause", "note": "Wanting fades if it is not fed. You do not have to obey a pull to watch it pass — that half-second is the whole of the freedom." }
+      ],
+      "caveat": "Naming the pull as wanting, not needing, is most of the work. The two systems feel identical from the inside until you look."
+    },
+    {
+      "id": "future-self",
+      "name": "The Future Self",
+      "kicker": "Series IV · one bond, two errors",
+      "form": "strata",
+      "intro": "One relationship with a single measure: how much of the present you owe the person you are becoming — and the cost of getting it wrong in either direction.",
+      "layers": [
+        { "label": "Underinvestment", "note": "Filing the person you'll become as a stranger, and mailing them the bill. The debt disguises itself as freedom." },
+        { "label": "The Bridge", "note": "Treating the future self as real and owed to — paying forward, without enslaving the whole present to a plan." },
+        { "label": "Overinvestment", "note": "Unable to let go, because you already spent the future on it: it became your identity, and releasing it would demolish a self you already live inside." }
+      ],
+      "caveat": "The question is never simply 'more' or 'less'. It is honesty: a bond with a real future self, a bill mailed to a stranger, or a prison you built and moved into?"
+    },
+    {
+      "id": "body-ledger",
+      "name": "The Body's Ledger",
+      "kicker": "Series II · the chemistry of agency",
+      "form": "pyramid",
+      "intro": "The mind does not float free; it runs on a physical engine. This is the hardware that decides whether you have the capacity to author a response at all — or whether chemistry makes the choice for you.",
+      "layers": [
+        { "label": "The Thieves — Substances", "note": "Alcohol laundering agency, nicotine digging the hole it pretends to fill. The pen, voluntarily and repeatedly surrendered." },
+        { "label": "The Regulators — Sleep & Light", "note": "Claiming the morning instead of surviving it; the stance for the whole day is half-won the night before." },
+        { "label": "The Fuel — Blood Sugar", "note": "The fast crash that dresses up as an existential crisis, and the slow caramelising of tissue that never sends a receipt." },
+        { "label": "The Baseline — Minerals & Elements", "note": "Magnesium, zinc, calcium — the rock the nervous system stands on. A shortage here does not announce itself; it wears the mask of a mood." }
+      ],
+      "caveat": "None of these arrive labelled as chemistry — they arrive disguised as your personality. The first move is to suspect the machine before you indict the self."
     },
     {
       "id": "freud",
