@@ -1,5 +1,5 @@
 {
-  "note": "Source of truth for the Structures page (structures.html) — the maps this site is built on, plus the canonical maps of the psyche. Each structure renders as a stack of labelled bands: form 'strata' = full-width bands; form 'pyramid' = bands that widen towards the base (so write the base LAST). 'layers' are top-to-bottom as they should appear. Editorial prose — refine freely. Literal Unicode only, no HTML entities.",
+  "note": "Source of truth for the Structures page (structures.html) — the maps this site is built on, plus the canonical maps of the psyche. Each structure renders as a stack of labelled bands: form 'strata' = full-width bands; form 'pyramid' = bands that widen towards the base (so write the base LAST). 'layers' are top-to-bottom as they should appear. Editorial prose — refine freely. Literal Unicode only — no HTML entities.",
   "structures": [
     {
       "id": "curriculum",
