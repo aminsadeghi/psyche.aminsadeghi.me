@@ -1,0 +1,51 @@
+{
+  "_note": "The 'Begin' overlay on the homepage — an About-this-site pane plus 'The Thin Ice', a short reading that bridges from The Mythos. Self-contained: path entries carry their own title + paragraphs and do NOT need to exist in catalog.json. If a path slug ever matches a real case, the overlay will pull that case's image/tagline/read-link live. Literal Unicode only — no HTML entities.",
+  "about": {
+    "title": "About The Psyche",
+    "subtitle": "Why this exists, and the idea behind it",
+    "paragraphs": [
+      "The Psyche is a reading of the modern mind — psychology told as story rather than measured as data. It is the companion to The Mythos: where that gathered the old Persian tales, this turns to the machine that made them, and to the self you are building now.",
+      "One idea runs under everything. The mind is a myth-making machine — it reads a face into a shadow, a plan into an accident, a who behind every silence, and it will gladly hand you a story to live inside: the life that has not started yet, the old wound that still runs the day. The stories are worth crossing. They are not worth moving into. This whole site is about that difference, and about the work of stepping off them onto solid ground.",
+      "It is not a self-help catalogue and not a clinic. It is bracing, honest, and ownership-first: worth is built, not handed out; you are responsible for your response even to what was never your fault; the work is the point. Each case file takes a single mechanism of the self — worth, agency, wanting, the future you keep mailing the bill to — and reads it plainly enough to use. No one is born with a fully developed soul. You have to work for that.",
+      "Start anywhere, or start at the top. If you have just come from The Mythos, read The Thin Ice first — three short pages, in the panel beside this one, on why those myths gripped you and how to cross them without moving in. Then open the case files."
+    ]
+  },
+  "pathHeading": "The Thin Ice — a threshold",
+  "path": [
+    {
+      "slug": "the-mirror",
+      "title": "The Mirror",
+      "kicker": "The Thin Ice · 1 of 3",
+      "paragraphs": [
+        "You just walked through a world of gods and champions, and somewhere in it your chest tightened — a betrayed son, a doomed hero, a throne worth weeping over. Stop on that feeling. Why should a quarrel between kings who never lived reach into a stranger, in a century they could not have imagined, and pull?",
+        "Because it was never a report from somewhere else. It was a mirror, and the face in it was yours. A frozen lake is a mirror too. It hands you back your own face, and it will hold your weight — as long as you keep moving and never ask how deep the water is.",
+        "To understand a myth, you have to turn from the story to the thing that makes it: the mind. Twenty-five centuries ago Xenophanes caught that mind in the act. The Ethiopians make their gods dark and flat-nosed; the Thracians make theirs pale and red-haired; and if horses could draw, their gods would have hooves. We build makers and carve them in our own likeness — and not only our faces. Homer and Hesiod, he said, hung on their gods everything shameful in men: theft, adultery, deceit. The mind does not only paint our features on the heavens. It paints our hungers there, at a size we can kneel to.",
+        "This is not a flaw to be ashamed of. It is the same machine that reads a cause behind the accident and a who behind the silence — because a world run by persons is one a mind can hold. It will make myths whether you allow it or not. So the question is never whether you mythologise. It is the one that quietly decides a life: do you cross the myth, or do you build on it?",
+        "The gods were never out there, then. They came from the mind behind your forehead — the mind that painted this bright surface and then mistook it for a floor. You have been walking on it your whole life, and it has been handing you your own face. Walking is allowed. Building is not."
+      ]
+    },
+    {
+      "slug": "the-two-rooms",
+      "title": "The Two Rooms",
+      "kicker": "The Thin Ice · 2 of 3",
+      "paragraphs": [
+        "Your Mythos already showed you what it costs to stop crossing and move in. Twice — two houses built on the same thin ice.",
+        "One house is the image. A champion grew so fused with his own legend that when a young warrior faced him and asked, plainly, are you the man the songs are about? — he would not say yes. The boy was his son; neither had ever seen the other's face. He had lived on that name for a lifetime, and the ice held — until the day it had to carry the weight of his own child. Then it gave way. He learned the truth from a token on the body, after the blade. The legend ate the boy.",
+        "The other house is the wound. A king grew two serpents from his shoulders. Cut them off and they returned; the only thing that quieted them was to feed them the brains of the young, day after day. He did not decide to become a monster — he agreed to a feeding schedule. He had mistaken a frozen wound for solid land and raised a palace on it, and for a thousand years the young were fed to the serpents to keep it from going under. A wound allowed to write the rules will put the young on the menu.",
+        "Two houses, one lake. One man will not say his name; the other will not finish his meal; both mistook a bright surface for solid ground. The image will not say its name. The wound will not finish its meal. Between them there is no tomorrow — only the crack, and then the cold.",
+        "You will not live those plots. But you already know the ice. The shining life that has not started yet; the old hurt that still sets the day; the grey that falls over an ordinary Tuesday because it is not it. That grey is not wisdom. It is rent on a room you do not own — the first faint creak under a floor you were never meant to stand still on."
+      ]
+    },
+    {
+      "slug": "solid-ground",
+      "title": "Solid Ground",
+      "kicker": "The Thin Ice · 3 of 3",
+      "paragraphs": [
+        "A myth is not land. It is a crossing — and you carry something to the far side.",
+        "The oldest tellers knew what that something was. The fairy tale does not invent the child's dragon; the child has known the dragon since he first had an imagination. What the tale hands him is a figure who can kill it — and then it expects him to walk back into his own day and swing. Your own Mythos ends its serpent-king not with a spell but with a blacksmith — a man on solid ground, who tears up the decree that calls the horror just, ties his leather apron to a spear, and lifts it. That is a myth used correctly: not a house he moved into, but a nerve he carried to the far bank. The story was never a place to live. It was a loan of nerve — spend it on the crossing. You have been admiring the dragon instead of fighting it.",
+        "That is where this reading ends, and where the case files begin. This is not another pantheon. It is the machine that built the last one — the mind that paints a who on silence, a destiny on a delay, a dragon on a difficulty. From here we stop kneeling to the shapes we painted on the heavens. We learn to hold the myth as what it always was: a tool, not a god, and never a house on the ice.",
+        "This is the solid ground on the far side. From here, we take the machine apart."
+      ]
+    }
+  ]
+}
