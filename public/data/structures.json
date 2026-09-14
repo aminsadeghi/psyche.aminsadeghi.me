@@ -1,0 +1,65 @@
+{
+  "note": "Source of truth for the Structures page (structures.html) — canonical maps of the psyche, plus this site's own model. Each structure renders as a stack of labelled bands: form 'strata' = full-width bands; form 'pyramid' = bands that widen toward the base. 'layers' are written top-to-bottom as they should appear. Editorial prose — refine freely. Literal Unicode only, no HTML entities.",
+  "structures": [
+    {
+      "id": "foundations",
+      "name": "The Foundations of a Self",
+      "kicker": "This site's own model",
+      "form": "strata",
+      "intro": "Not how the self was formed — that is the clinic's map — but what a strong one is built on, and the order of the work. The Psyche's first series climbs this ladder from the ground up.",
+      "layers": [
+        { "label": "Purpose", "note": "A why you can carry almost any how toward. Without it, no technique holds." },
+        { "label": "Discipline", "note": "Choosing what you want most over what you want now. Motivation is a liar; acting anyway is freedom." },
+        { "label": "Fear", "note": "Almost every flaw is fear in costume. Love, openness and presence are what remain when it leaves." },
+        { "label": "Agency", "note": "Author, not victim. You do not choose the weather; you author the response — always. The keystone." },
+        { "label": "Worth", "note": "Built, not handed out; non-contingent, owned outright. The ground everything else stands on." }
+      ],
+      "caveat": "A curriculum, not a diagnosis. The order is deliberate — nothing above holds until Worth and Agency are under it."
+    },
+    {
+      "id": "freud",
+      "name": "Freud's Structural Model",
+      "kicker": "Id · Ego · Superego",
+      "form": "strata",
+      "intro": "The mind read as three forces in constant negotiation, most of it below the waterline of awareness. A century old and much revised — but still the vocabulary everyone borrows.",
+      "layers": [
+        { "label": "Superego", "note": "The internalised rules and ideals — conscience, and the image of who you ought to be." },
+        { "label": "Ego", "note": "The negotiator and reality-tester, brokering between drive, conscience, and the world as it is." },
+        { "label": "Id", "note": "The reservoir of drive and appetite — wants, now, without limit or logic." }
+      ],
+      "caveat": "A historical map, not a brain diagram. Treat it as a useful metaphor for inner conflict, not a literal anatomy."
+    },
+    {
+      "id": "jung",
+      "name": "Jung's Model of the Psyche",
+      "kicker": "From the mask to the Self",
+      "form": "strata",
+      "intro": "Consciousness as a small lit circle inside a vast inherited dark. Individuation is the long work of moving from the outermost mask down toward the Self at the centre.",
+      "layers": [
+        { "label": "Persona", "note": "The mask worn for the world — useful, until you mistake it for the whole of you." },
+        { "label": "Ego", "note": "The centre of consciousness; the 'I' that knows itself." },
+        { "label": "Personal Unconscious", "note": "Forgotten and repressed material, gathered into charged complexes." },
+        { "label": "The Shadow", "note": "What the ego disowns — refused, and therefore where much of the power is kept." },
+        { "label": "Anima / Animus", "note": "The contrasexual inner figure; the bridge from the ego down into the depths." },
+        { "label": "Collective Unconscious", "note": "Inherited patterns shared across all people — the archetypes." },
+        { "label": "The Self", "note": "The centre and totality of the whole psyche; what individuation moves toward." }
+      ],
+      "caveat": "Read outer-to-inner: this is a depth gradient, not a ranking — the Self is the core, not the top."
+    },
+    {
+      "id": "maslow",
+      "name": "Maslow's Hierarchy of Needs",
+      "kicker": "The ladder of motivation",
+      "form": "pyramid",
+      "intro": "A ladder of human needs, each rung said to press hardest once the ones below it are reasonably met — from staying alive at the base to becoming fully yourself at the top.",
+      "layers": [
+        { "label": "Self-Actualisation", "note": "Becoming what you are capable of — growth, meaning, the fullest use of the self." },
+        { "label": "Esteem", "note": "Competence, respect, and standing — both earned and given." },
+        { "label": "Love & Belonging", "note": "Intimacy, friendship, being part of something." },
+        { "label": "Safety", "note": "Security of body, resources, and a predictable world." },
+        { "label": "Physiological", "note": "Air, water, food, warmth, rest — the body kept alive." }
+      ],
+      "caveat": "The strict 'lower needs first' ordering is contested — people reach for meaning under hardship all the time. Hold it as a rough map, not a law."
+    }
+  ]
+}

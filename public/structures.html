@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Structures | The Psyche</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="The Structures — canonical maps of the psyche, and the model The Psyche is built on.">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<style>
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background-color: #050e1b;
+    background-image: radial-gradient(circle at top right, #111d2e 0%, #050e1b 100%);
+    color: #c7cfdb;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+
+  /* Top bar */
+  .st-topbar {
+    position: fixed; top: 0; left: 0; right: 0; height: 58px; z-index: 40;
+    display: flex; align-items: center; gap: 16px;
+    padding: 0 22px;
+    background: rgba(5, 14, 27, 0.72);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.16);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  }
+  .st-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: #d4b26a; text-decoration: none;
+    font-size: 11px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase;
+    padding: 8px 14px; border: 1px solid rgba(197, 160, 89, 0.4); border-radius: 999px;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .st-back:hover { background: rgba(197, 160, 89, 0.16); color: #fff; border-color: #c5a059; }
+  .st-brand { display: flex; flex-direction: column; line-height: 1.2; }
+  .st-brand b { font-family: "Times New Roman", Times, serif; font-weight: normal; color: #fff; font-size: 16px; }
+  .st-brand span { color: #c5a059; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; }
+
+  /* Shell: rail + main */
+  .st-shell { position: fixed; inset: 58px 0 0 0; display: flex; }
+
+  .st-rail {
+    flex: 0 0 clamp(230px, 26%, 300px);
+    border-right: 1px solid rgba(197, 160, 89, 0.14);
+    background: rgba(10, 15, 25, 0.4);
+    overflow-y: auto;
+    padding: 20px 0;
+  }
+  .st-rail-heading {
+    font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+    color: #64748b; padding: 8px 24px 12px;
+  }
+  .rail-item {
+    display: flex; flex-direction: column; gap: 3px;
+    width: 100%; text-align: left; background: none; border: none;
+    border-left: 2px solid transparent; cursor: pointer;
+    padding: 13px 24px; font-family: inherit;
+    transition: background 0.18s ease, border-color 0.18s ease;
+  }
+  .rail-item:hover { background: rgba(197, 160, 89, 0.07); }
+  .rail-item.active { background: rgba(197, 160, 89, 0.14); border-left-color: #c5a059; }
+  .rail-name { font-family: "Times New Roman", Times, serif; font-size: 17px; color: #c7cfdb; line-height: 1.25; }
+  .rail-item.active .rail-name { color: #fff; }
+  .rail-kicker { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #64748b; }
+
+  /* Main */
+  .st-main { flex: 1 1 auto; overflow-y: auto; padding: 46px 56px 80px; }
+  .st-rail::-webkit-scrollbar, .st-main::-webkit-scrollbar { width: 8px; }
+  .st-rail::-webkit-scrollbar-thumb, .st-main::-webkit-scrollbar-thumb { background: rgba(197, 160, 89, 0.3); border-radius: 4px; }
+
+  .panel { max-width: 720px; }
+  .panel-kicker { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #c5a059; margin-bottom: 8px; }
+  .panel-title { font-family: "Times New Roman", Times, serif; font-weight: normal; font-size: 40px; color: #ebd299; margin: 0 0 16px; line-height: 1.05; }
+  .panel-intro { font-family: "Times New Roman", Times, serif; font-size: 18px; line-height: 1.7; color: #a9b6c6; margin: 0 0 34px; }
+
+  .diagram { display: flex; flex-direction: column; gap: 8px; margin: 0 0 30px; }
+  .diagram.pyramid { align-items: center; }
+  .band {
+    background: linear-gradient(90deg, rgba(197,160,89,0.16) 0%, rgba(197,160,89,0.05) 100%);
+    border: 1px solid rgba(197, 160, 89, 0.28);
+    border-left: 3px solid #c5a059;
+    border-radius: 8px;
+    padding: 14px 18px;
+  }
+  .diagram.pyramid .band { text-align: center; }
+  .band-label { font-family: "Times New Roman", Times, serif; font-size: 18px; color: #fff; margin-bottom: 3px; }
+  .band-note { font-size: 13.5px; line-height: 1.55; color: #9aa6b6; }
+  .diagram.pyramid .band-note { max-width: 460px; margin: 3px auto 0; }
+
+  .panel-caveat {
+    font-size: 13px; line-height: 1.6; color: #8a9bb1; font-style: italic;
+    border-top: 1px solid rgba(197, 160, 89, 0.18); padding-top: 18px; margin: 8px 0 0;
+  }
+
+  @media (max-width: 800px) {
+    body { overflow: auto; }
+    .st-shell { position: static; inset: auto; flex-direction: column; margin-top: 58px; }
+    .st-rail {
+      flex: 0 0 auto; width: 100%;
+      border-right: none; border-bottom: 1px solid rgba(197, 160, 89, 0.14);
+      display: flex; overflow-x: auto; padding: 12px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .st-rail-heading { display: none; }
+    .rail-item {
+      flex: 0 0 auto; width: auto; border-left: none;
+      border: 1px solid rgba(197, 160, 89, 0.28); border-radius: 999px;
+      margin-right: 8px; padding: 9px 15px;
+    }
+    .rail-item.active { border-color: #c5a059; }
+    .rail-kicker { display: none; }
+    .rail-name { font-size: 14px; white-space: nowrap; }
+    .st-main { padding: 30px 22px 60px; }
+    .panel-title { font-size: 30px; }
+    .band { width: 100% !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="st-topbar">
+  <a class="st-back" href="/index.html" aria-label="Back to The Psyche">&larr; The Psyche</a>
+  <div class="st-brand"><b>Structures</b><span>Maps of the Psyche</span></div>
+</div>
+
+<div class="st-shell">
+  <nav class="st-rail" id="rail">
+    <div class="st-rail-heading">The Structures</div>
+    <div id="rail-list"><!-- injected --></div>
+  </nav>
+  <main class="st-main" id="main"><!-- injected --></main>
+</div>
+
+<script>
+  let data = null;
+
+  function esc(s) { return String(s == null ? '' : s); }
+
+  function buildRail() {
+    const list = document.getElementById('rail-list');
+    list.innerHTML = '';
+    data.structures.forEach(s => {
+      const it = document.createElement('button');
+      it.className = 'rail-item';
+      it.id = 'rail-' + s.id;
+      it.onclick = () => select(s.id);
+      it.innerHTML = `<span class="rail-name">${esc(s.name)}</span><span class="rail-kicker">${esc(s.kicker)}</span>`;
+      list.appendChild(it);
+    });
+  }
+
+  function select(id) {
+    const s = data.structures.find(x => x.id === id) || data.structures[0];
+    document.querySelectorAll('.rail-item').forEach(n => n.classList.remove('active'));
+    const el = document.getElementById('rail-' + s.id);
+    if (el) el.classList.add('active');
+    try { history.replaceState(null, '', '#' + s.id); } catch (e) {}
+
+    const n = s.layers.length;
+    const bands = s.layers.map((L, i) => {
+      let w = '100%';
+      if (s.form === 'pyramid') {
+        const min = 46, max = 100;
+        w = (min + (max - min) * (n > 1 ? i / (n - 1) : 1)).toFixed(1) + '%';
+      }
+      return `<div class="band" style="width:${w}">` +
+             `<div class="band-label">${esc(L.label)}</div>` +
+             `<div class="band-note">${esc(L.note)}</div></div>`;
+    }).join('');
+
+    document.getElementById('main').innerHTML =
+      `<div class="panel">` +
+      `<div class="panel-kicker">${esc(s.kicker)}</div>` +
+      `<h1 class="panel-title">${esc(s.name)}</h1>` +
+      `<p class="panel-intro">${esc(s.intro)}</p>` +
+      `<div class="diagram ${esc(s.form)}">${bands}</div>` +
+      (s.caveat ? `<p class="panel-caveat">${esc(s.caveat)}</p>` : '') +
+      `</div>`;
+    document.getElementById('main').scrollTop = 0;
+  }
+
+  async function boot() {
+    try {
+      const r = await fetch('/data/structures.json?t=' + Date.now(), { cache: 'no-store' });
+      data = await r.json();
+    } catch (e) {
+      document.getElementById('main').innerHTML = '<div class="panel"><p class="panel-intro">Could not load the structures.</p></div>';
+      return;
+    }
+    if (!data || !data.structures || !data.structures.length) return;
+    buildRail();
+    const initial = (location.hash || '').replace('#', '') || data.structures[0].id;
+    select(initial);
+  }
+
+  boot();
+</script>
+
+<!-- The Three Worlds — shared collection menu -->
+<script src="https://aminsadeghi.me/menu.js?project=psyche&offset=0" defer></script>
+</body>
+</html>

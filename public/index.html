@@ -497,26 +497,54 @@
             }
         }
 
-        /* --- BEGIN PILL (left-panel button that opens the overlay) --- */
-        .begin-pill {
-            display: inline-flex;
+        /* --- TOP-RIGHT CLUSTER (Begin + Structures) — matches the World Map pill --- */
+        .top-cluster {
+            position: fixed;
+            top: 70px;              /* clears the shared World Map pill (top:22 + ~34 + gap) */
+            right: 22px;
+            z-index: 60;
+            display: flex;
+            flex-direction: row;
             align-items: center;
-            gap: 7px;
-            margin-top: 16px;
-            padding: 8px 15px;
-            border: 1px solid rgba(197, 160, 89, 0.5);
+            gap: 12px;
+        }
+        .char-btn {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 10px 17px;
+            box-sizing: border-box;
+            background: rgba(197, 160, 89, 0.14);
+            border: 1px solid rgba(197, 160, 89, 0.55);
             border-radius: 999px;
             color: #d4b26a;
-            font-size: 10px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
+            font-size: 12px;
             font-weight: 700;
-            letter-spacing: 2px;
+            letter-spacing: 1.4px;
             text-transform: uppercase;
+            line-height: 1;
             cursor: pointer;
-            user-select: none;
-            transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+            text-decoration: none;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+            transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease, transform 0.2s ease;
         }
-        .begin-pill:hover { background: rgba(197, 160, 89, 0.16); color: #fff; border-color: #c5a059; }
-        .begin-pill svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2; }
+        .char-btn:hover, .char-btn:focus-visible {
+            border-color: #c5a059;
+            color: #fff;
+            background: rgba(197, 160, 89, 0.28);
+            transform: translateY(-1px);
+            outline: none;
+        }
+        .char-btn:active { transform: translateY(0); }
+        .char-btn svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.7; flex: 0 0 auto; }
+
+        @media (max-width: 800px) {
+            .char-btn { padding: 10px; gap: 0; }
+            .char-btn .char-btn-label { display: none; }
+        }
 
         /* --- BEGIN OVERLAY (full-screen "Start Here" — rail + reader) --- */
         .begin-overlay {
@@ -734,10 +762,6 @@
         <div class="brand-header">
             <h1>Amin Sadeghi</h1>
             <div class="subtitle">The Psyche</div>
-            <div class="begin-pill" id="begin-pill" role="button" tabindex="0" aria-label="Begin — about this site and where to start" onclick="openBegin()">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M15.2 8.8l-2.4 5.6L8.8 15.2l2.4-5.6z"></path></svg>
-                <span>Begin</span>
-            </div>
         </div>
         <div id="menu-container">
             <!-- Menu will be injected here via JS -->
@@ -793,6 +817,18 @@
             </div>
             <a href="#" class="read-btn" id="read-btn" style="display:none;">Read the Case &rarr;</a>
         </div>
+    </div>
+
+    <!-- TOP-RIGHT CLUSTER — Begin (opens the About/Thin Ice overlay) + Structures (a page). -->
+    <div class="top-cluster" id="top-cluster">
+        <div class="char-btn" id="begin-pill" role="button" tabindex="0" aria-label="Begin — about this site and where to start" onclick="openBegin()">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M15.2 8.8l-2.4 5.6L8.8 15.2l2.4-5.6z"></path></svg>
+            <span class="char-btn-label">Begin</span>
+        </div>
+        <a class="char-btn" id="structures-btn" href="/structures.html" aria-label="Structures — the maps of the psyche">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.4"></circle></svg>
+            <span class="char-btn-label">Structures</span>
+        </a>
     </div>
 
     <!-- BEGIN overlay — "Start Here": an About-this-site pane plus The Thin Ice, a short
@@ -1120,6 +1156,6 @@
     </script>
 
     <!-- The Three Worlds — shared collection menu (see PROJECT-SCOPE.md) -->
-    <script src="https://aminsadeghi.me/menu.js?project=psyche" defer></script>
+    <script src="https://aminsadeghi.me/menu.js?project=psyche&offset=0" defer></script>
 </body>
 </html>
