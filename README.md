@@ -1,6 +1,6 @@
 # psyche.aminsadeghi.me — The Psyche
 
-The **Inner World** site of the [Three Worlds collection](https://aminsadeghi.me/PROJECT-SCOPE.md):
+The **Inner World** site of the [Layered Worlds collection](https://aminsadeghi.me/PROJECT-SCOPE.md):
 **psychology, read as story** — the mind and the self as case files.
 
 Same architecture as The Archives, The Mirage, and The Mythos: a Cloudflare Worker

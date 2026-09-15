@@ -1,9 +1,11 @@
 # Series I · Case 3 — **Fear**  ·  *research doc (Claude/web leg complete)*
 
-**Status:** research **done** — all three legs run and reconciled (Claude/web + GeminiPro draft +
-SuperGrok 2026 science). Prose tightened into house voice (below). **Awaiting Amin's sign-off on the
-prose + go-ahead to wire** (the wire forces a global case renumber — see Wiring cost). No pages in
-`series-1.json` yet; no thumbnails yet.
+**Status:** **SHIPPED (16/09/2026).** All three legs run and reconciled (Claude/web + GeminiPro draft +
+SuperGrok 2026 science); prose tightened into house voice (below) and wired: 3 pages added to
+`series-1.json` under slug `fear`, seated as **case 3** in `catalog.json` (which forced the global
+renumber 3→14 + thumbnail-file shift, all done), and the aminsadeghi.me offline fallback bumped 50→53.
+**Remaining:** real thumbnails for `3.1/3.2/3.3` (currently placeholders copied from the Cage) and a
+deploy of both repos.
 
 **★ SuperGrok resolution (2026) — the thesis is a LENS, not a fact.** Grok's essay-safe line, adopted:
 *people who live with a background sense of unsafety over-learn a small set of interpersonal moves —

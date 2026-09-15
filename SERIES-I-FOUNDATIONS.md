@@ -45,7 +45,12 @@ hard question it answers**.
    "do it afraid" angle. Fear is the engine under control, jealousy, anger,
    avoidance, and people-pleasing; love, openness, and presence are not things you
    summon but **what remains when the fear leaves.** (Cf. "perfect love casts out
-   fear.")
+   fear.") **DONE (16/09/2026)** — shipped as case 3 (**Fear**, slug `fear`, 3 pages:
+   The Costume / The Three Moves / What's Left). The three moves are Horney's
+   toward/against/away, fully un-jargoned (placate / attack / vanish); closes on the
+   1 John inversion, **no motto** (kept a Series-I punch). Research + the three-leg
+   method are in `FEAR.md`. Placeholder thumbnails only (3.1–3.3, copied from the
+   Cage) — real art still to come.
 4. **Discipline / self-mastery** — *"Discipline is choosing what you want most over
    what you want now."* Motivation is a liar; acting when you don't feel like it is
    freedom.
