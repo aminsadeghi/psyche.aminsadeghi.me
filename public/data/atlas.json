@@ -1,0 +1,67 @@
+{
+  "note": "Mapping data for the Atlas (atlas.html). The Atlas drops the real case files (from catalog.json) onto several MAPS; the left rail switches between them. This file carries the editorial metadata each map reads: per-case 'move'/'before'/'after', the lens copy, the move-column copy, the symptom hubs, and the special layouts (body ledger tiers, the two hungers). Layout maths live in atlas.html; the words live here. Case ids match catalog.json. Literal Unicode only — no HTML entities.",
+
+  "lenses": [
+    { "id": "crossing", "name": "The Crossing", "kicker": "The Cage → the Open Field", "intro": "Every case is the same motion: from the comfortable, unfree default to the owned, exposed self. Grouped by the move, not the series — so the same evasion at four different altitudes lines up in one column." },
+    { "id": "symptom", "name": "By Symptom", "kicker": "Enter by what is wrong", "intro": "Not chapters — complaints. Start from what you actually feel, and follow it to the cases that read it plainly. One symptom pulls cases from across the series." },
+    { "id": "curriculum", "name": "The Curriculum", "kicker": "Where to start", "intro": "The whole site as one building, raised from the ground up — four series, each a floor, each case a room. The reading order, honestly labelled as one view among several." },
+    { "id": "body-ledger", "name": "The Body's Ledger", "kicker": "Chemistry under character", "intro": "The self runs on a physical engine. The hardware cases stack from the baseline up; the character cases float above — because a shortage down here arrives disguised as who you are." },
+    { "id": "two-hungers", "name": "The Two Hungers", "kicker": "Wanting is not liking", "intro": "The brain keeps two systems: the one that chases and the one that enjoys. The engineered cravings live in the gap between them — maximum pull, minimum payoff." }
+  ],
+
+  "moves": {
+    "avoidance": { "title": "The Cage", "note": "The comfortable, unfree default — the trap dressed as safety. The same evasion at every altitude." },
+    "craving": { "title": "The Gap", "note": "Maximum pull, minimum payoff. Wanting mistaken for needing." },
+    "substrate": { "title": "The Engine", "note": "The hardware the self runs on. Suspect the machine before you indict the self." },
+    "ground": { "title": "The Open Field", "note": "Built, owned, exposed. The self raised on solid ground." }
+  },
+  "moveOrder": ["avoidance", "craving", "substrate", "ground"],
+
+  "cases": {
+    "1.1": { "move": "ground", "before": "worth kept on a scoreboard", "after": "ground that cannot be taken" },
+    "1.2": { "move": "avoidance", "before": "life happening to you", "after": "authoring the response" },
+    "1.3": { "move": "avoidance", "before": "fear in costume", "after": "what is left when it leaves" },
+    "1.4": { "move": "craving", "before": "waiting for the wind of motivation", "after": "acting anyway" },
+    "1.5": { "move": "ground", "before": "drift", "after": "a why that carries load" },
+    "2.1": { "move": "substrate", "before": "chemistry holds the pen", "after": "taking it back with the fork" },
+    "2.2": { "move": "substrate", "before": "a shortage wearing the mask of a mood", "after": "the baseline restored" },
+    "2.3": { "move": "craving", "before": "the hole it digs and sells you the filling", "after": "seeing the loop" },
+    "2.4": { "move": "avoidance", "before": "the alibi bought in advance", "after": "leaving the refuge" },
+    "2.5": { "move": "craving", "before": "pleasure now, cost posted elsewhere", "after": "reading the receipt" },
+    "2.6": { "move": "substrate", "before": "waiting to be told what the day is", "after": "claiming the morning" },
+    "3.1": { "move": "craving", "before": "a cup that gold cannot fill", "after": "seeing the wanting itself" },
+    "3.2": { "move": "avoidance", "before": "gratitude as a lid on grief", "after": "dropping the lid" },
+    "3.3": { "move": "ground", "before": "a poverty to escape", "after": "a field to work in" },
+    "4.1": { "move": "ground", "before": "mailing the bill to a stranger", "after": "building the bridge" },
+    "4.2": { "move": "avoidance", "before": "a prison you already moved into", "after": "the open hand" }
+  },
+
+  "symptoms": [
+    { "q": "I keep putting things off.", "cases": ["1.4", "4.1", "1.3"] },
+    { "q": "Nothing I get ever feels like enough.", "cases": ["1.1", "3.1", "3.3"] },
+    { "q": "I cannot sit with a craving.", "cases": ["2.3", "2.5", "3.1", "2.4"] },
+    { "q": "My moods swing and I cannot say why.", "cases": ["2.2", "2.1", "2.5", "2.6"] },
+    { "q": "Life feels like it just happens to me.", "cases": ["1.2", "2.6", "1.4"] },
+    { "q": "I keep numbing out or looking away.", "cases": ["1.3", "2.4", "3.2"] },
+    { "q": "I cannot let go of what is already over.", "cases": ["4.2", "3.2"] },
+    { "q": "I do not know what any of it is for.", "cases": ["1.5", "4.1"] }
+  ],
+
+  "bodyLedger": {
+    "tiers": [
+      { "label": "The Thieves — Substances", "cases": ["2.3", "2.4"] },
+      { "label": "The Regulators — Sleep & Light", "cases": ["2.6"] },
+      { "label": "The Fuel — Blood Sugar", "cases": ["2.5"] },
+      { "label": "The Baseline — Minerals & Elements", "cases": ["2.2"] }
+    ],
+    "frame": { "label": "The whole plate", "cases": ["2.1"] },
+    "above": { "label": "…and the character it runs on", "cases": ["1.1", "1.3", "1.4"] }
+  },
+
+  "twoHungers": {
+    "left": { "label": "Wanting", "note": "The 'go get it' pull — loud, forward-leaning, easily hijacked." },
+    "right": { "label": "Liking", "note": "The actual payoff — quiet, small, quick to fade." },
+    "gap": ["2.3", "2.5", "3.1", "2.4", "1.4"],
+    "exit": { "label": "The Pause", "note": "Wanting fades if it is not fed. That half-second is the whole of the freedom." }
+  }
+}
