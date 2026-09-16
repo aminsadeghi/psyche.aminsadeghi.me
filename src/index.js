@@ -148,7 +148,7 @@ export default {
               menuHtml += `<div class="series-group"><div class="series-header"><div class="series-num">${romanNumeral}</div><div class="series-title-wrap"><div class="series-label">${series.title}</div><div class="series-title">${series.subtitle}</div></div></div><div class="menu-list">`;
               
               seriesCases.forEach(c => {
-                const caseNum = c.id.padStart(2, '0');
+                const caseNum = c.id.split('.').pop().padStart(2, '0');
                 menuHtml += `<div class="story-link" id="link-case-${c.id}" onclick="loadCase('${c.id}')"><div class="story-link-left"><span class="case-num">${caseNum}</span><span class="story-title">${c.title}</span></div><span class="page-count">${c.pageCount > 0 ? c.pageCount : 'Soon'}</span></div>`;
               });
               

@@ -968,7 +968,7 @@
                 listDiv.className = 'menu-list';
 
                 seriesCases.forEach(c => {
-                    const caseNum = c.id.padStart(2, '0');
+                    const caseNum = c.id.split('.').pop().padStart(2, '0');
                     const link = document.createElement('div');
                     link.className = 'story-link';
                     link.id = `link-case-${c.id}`;
@@ -1049,7 +1049,7 @@
             }
 
             setTimeout(() => {
-                document.getElementById('dash-meta-left').innerText = `CASE ${currentCase.id.padStart(2, '0')} • ${seriesInfo.title.toUpperCase()}`;
+                document.getElementById('dash-meta-left').innerText = `CASE ${currentCase.id.split('.').pop().padStart(2, '0')} • ${seriesInfo.title.toUpperCase()}`;
                 document.getElementById('dash-meta-right').innerText = `STATUS: ${currentCase.status.toUpperCase()}`;
                 document.getElementById('dash-title').innerText = currentCase.title;
                 document.getElementById('dash-tagline').innerText = `"${currentCase.tagline}"`;
@@ -1107,7 +1107,8 @@
                 // Load the last viewed case
                 if (catalogData && catalogData.cases.length > 0) {
                     const savedCase = localStorage.getItem('lastActiveCase');
-                    const caseToLoad = savedCase ? savedCase : catalogData.cases[0].id;
+                    const savedValid = savedCase && catalogData.cases.some(c => c.id === savedCase);
+                    const caseToLoad = savedValid ? savedCase : catalogData.cases[0].id;
                     loadCase(caseToLoad);
                     
                     const savedScroll = localStorage.getItem('menuScrollPos');

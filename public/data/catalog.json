@@ -27,7 +27,7 @@
   ],
   "cases": [
     {
-      "id": "1",
+      "id": "1.1",
       "slug": "the-self-esteem-scoreboard",
       "seriesId": "series-1",
       "title": "The Self-Esteem Scoreboard",
@@ -35,13 +35,13 @@
       "status": "Complete",
       "pageCount": 7,
       "nodes": [
-        { "image": "/the-psyche/images/thumbs/1.1.jpg", "label": "The Scoreboard" },
-        { "image": "/the-psyche/images/thumbs/1.2.jpg", "label": "The Contingent" },
-        { "image": "/the-psyche/images/thumbs/1.3.jpg", "label": "The Ground" }
+        { "image": "/the-psyche/images/thumbs/1.1.1.jpg", "label": "The Scoreboard" },
+        { "image": "/the-psyche/images/thumbs/1.1.2.jpg", "label": "The Contingent" },
+        { "image": "/the-psyche/images/thumbs/1.1.3.jpg", "label": "The Ground" }
       ]
     },
     {
-      "id": "2",
+      "id": "1.2",
       "slug": "the-cage",
       "seriesId": "series-1",
       "title": "Agency & The Cage",
@@ -49,13 +49,13 @@
       "status": "Complete",
       "pageCount": 6,
       "nodes": [
-        { "image": "/the-psyche/images/thumbs/2.1.jpg", "label": "The Cage" },
-        { "image": "/the-psyche/images/thumbs/2.2.jpg", "label": "The Bars" },
-        { "image": "/the-psyche/images/thumbs/2.3.jpg", "label": "The Open Field" }
+        { "image": "/the-psyche/images/thumbs/1.2.1.jpg", "label": "The Cage" },
+        { "image": "/the-psyche/images/thumbs/1.2.2.jpg", "label": "The Bars" },
+        { "image": "/the-psyche/images/thumbs/1.2.3.jpg", "label": "The Open Field" }
       ]
     },
     {
-      "id": "3",
+      "id": "1.3",
       "slug": "fear",
       "seriesId": "series-1",
       "title": "Fear",
@@ -63,167 +63,13 @@
       "status": "Complete",
       "pageCount": 3,
       "nodes": [
-        { "image": "/the-psyche/images/thumbs/3.1.jpg", "label": "The Costume" },
-        { "image": "/the-psyche/images/thumbs/3.2.jpg", "label": "The Three Moves" },
-        { "image": "/the-psyche/images/thumbs/3.3.jpg", "label": "What's Left" }
+        { "image": "/the-psyche/images/thumbs/1.3.1.jpg", "label": "The Costume" },
+        { "image": "/the-psyche/images/thumbs/1.3.2.jpg", "label": "The Three Moves" },
+        { "image": "/the-psyche/images/thumbs/1.3.3.jpg", "label": "What's Left" }
       ]
     },
     {
-      "id": "4",
-      "slug": "you-are-what-you-eat",
-      "seriesId": "series-2",
-      "title": "You Are What You Eat",
-      "tagline": "Your thoughts feel authored by you — but on this front chemistry holds the pen, and the fork is how you take it back.",
-      "status": "Complete",
-      "pageCount": 3,
-      "nodes": [
-        { "image": "/the-psyche/images/thumbs/4.1.jpg", "label": "The Plate" },
-        { "image": "/the-psyche/images/thumbs/4.2.jpg", "label": "The Gut" },
-        { "image": "/the-psyche/images/thumbs/4.3.jpg", "label": "The Mind" }
-      ]
-    },
-    {
-      "id": "5",
-      "slug": "minerals",
-      "seriesId": "series-2",
-      "title": "Minerals",
-      "tagline": "You are, in part, a short list of elements — and the mind you call yours runs on whether they are there or not.",
-      "status": "Complete",
-      "pageCount": 3,
-      "nodes": [
-        { "image": "/the-psyche/images/thumbs/5.1.jpg", "label": "The Elements" },
-        { "image": "/the-psyche/images/thumbs/5.2.jpg", "label": "The List" },
-        { "image": "/the-psyche/images/thumbs/5.3.jpg", "label": "The Drain" }
-      ]
-    },
-    {
-      "id": "6",
-      "slug": "smoking",
-      "seriesId": "series-2",
-      "title": "Smoking",
-      "tagline": "It does not add calm. It drills a hole and sells you the filling — the purest need a substance ever built for itself.",
-      "status": "Complete",
-      "pageCount": 4,
-      "nodes": [
-        { "image": "/the-psyche/images/thumbs/6.1.jpg", "label": "The Hole" },
-        { "image": "/the-psyche/images/thumbs/6.2.jpg", "label": "The Calm" },
-        { "image": "/the-psyche/images/thumbs/6.3.jpg", "label": "The Loop" }
-      ]
-    },
-    {
-      "id": "7",
-      "slug": "liquid-courage",
-      "seriesId": "series-2",
-      "title": "Alcohol",
-      "tagline": "The anti-agency drug — the alibi you buy in advance, and the refuge that teaches you to run.",
-      "status": "Complete",
-      "pageCount": 4,
-      "nodes": [
-        { "image": "/the-psyche/images/thumbs/7.1.jpg", "label": "Alcohol" },
-        { "image": "/the-psyche/images/thumbs/7.2.jpg", "label": "The Alibi" },
-        { "image": "/the-psyche/images/thumbs/7.3.jpg", "label": "The Refuge" }
-      ]
-    },
-    {
-      "id": "8",
-      "slug": "sugar",
-      "seriesId": "series-2",
-      "title": "Sugar",
-      "tagline": "The pleasure arrives upfront; the cost is posted to an address you never check — like the slow caramelising of the very machine you live in, which you never feel.",
-      "status": "Complete",
-      "pageCount": 4,
-      "nodes": [
-        { "image": "/the-psyche/images/thumbs/8.1.jpg", "label": "Sugar" },
-        { "image": "/the-psyche/images/thumbs/8.2.jpg", "label": "The Caramel" },
-        { "image": "/the-psyche/images/thumbs/8.3.jpg", "label": "No Receipt" }
-      ]
-    },
-    {
-      "id": "9",
-      "slug": "first-light",
-      "seriesId": "series-2",
-      "title": "Sleep",
-      "tagline": "Forget the eight-hour law sold past its evidence — the real lever is whether you rise to claim the day, or wait to be told what it will be.",
-      "status": "Complete",
-      "pageCount": 4,
-      "nodes": [
-        { "image": "/the-psyche/images/thumbs/9.1.jpg", "label": "Sleep" },
-        { "image": "/the-psyche/images/thumbs/9.2.jpg", "label": "The Number" },
-        { "image": "/the-psyche/images/thumbs/9.3.jpg", "label": "The Claim" }
-      ]
-    },
-    {
-      "id": "10",
-      "slug": "the-bottomless-bowl",
-      "seriesId": "series-3",
-      "title": "The Bottomless Bowl",
-      "tagline": "A beggar's cup that gold cannot fill — because it is made of the same wanting that is still open in you.",
-      "status": "Complete",
-      "pageCount": 3,
-      "nodes": [
-        { "image": "/the-psyche/images/thumbs/10.1.jpg", "label": "The Bowl" },
-        { "image": "/the-psyche/images/thumbs/10.2.jpg", "label": "The Chase" },
-        { "image": "/the-psyche/images/thumbs/10.3.jpg", "label": "The Ledger" }
-      ]
-    },
-    {
-      "id": "11",
-      "slug": "the-counterfeit",
-      "seriesId": "series-3",
-      "title": "The Counterfeit",
-      "tagline": "Most of what is sold as gratitude is a way of not feeling — a polite lid on grief and anger. That is not the practice. It is another bar of the cage.",
-      "status": "Complete",
-      "pageCount": 3,
-      "nodes": [
-        { "image": "/the-psyche/images/thumbs/11.1.jpg", "label": "The Lid" },
-        { "image": "/the-psyche/images/thumbs/11.2.jpg", "label": "The Bar" },
-        { "image": "/the-psyche/images/thumbs/11.3.jpg", "label": "The Lens" }
-      ]
-    },
-    {
-      "id": "12",
-      "slug": "gratitude",
-      "seriesId": "series-3",
-      "title": "Gratitude",
-      "tagline": "Not the feeling on command, but the deliberate act of reading what you already have as a field to work in rather than a poverty to escape — kept alive without killing the want.",
-      "status": "Complete",
-      "pageCount": 3,
-      "nodes": [
-        { "image": "/the-psyche/images/thumbs/12.1.jpg", "label": "The Move" },
-        { "image": "/the-psyche/images/thumbs/12.2.jpg", "label": "Overflow" },
-        { "image": "/the-psyche/images/thumbs/12.3.jpg", "label": "The Bowl" }
-      ]
-    },
-    {
-      "id": "13",
-      "slug": "underinvestment",
-      "seriesId": "series-4",
-      "title": "Underinvestment",
-      "tagline": "The part of you that decides files the person you'll become as a stranger — so you keep mailing them the bill, and mistake it for freedom.",
-      "status": "Complete",
-      "pageCount": 3,
-      "nodes": [
-        { "image": "/the-psyche/images/thumbs/13.1.jpg", "label": "The Stranger" },
-        { "image": "/the-psyche/images/thumbs/13.2.jpg", "label": "The Bill" },
-        { "image": "/the-psyche/images/thumbs/13.3.jpg", "label": "The Bridge" }
-      ]
-    },
-    {
-      "id": "14",
-      "slug": "overinvestment",
-      "seriesId": "series-4",
-      "title": "Overinvestment",
-      "tagline": "You can't let go of it because you already spent the future on it — it became your plans, your identity, your story, and releasing it now would demolish a self you already live inside.",
-      "status": "Complete",
-      "pageCount": 3,
-      "nodes": [
-        { "image": "/the-psyche/images/thumbs/14.1.jpg", "label": "The Blueprint" },
-        { "image": "/the-psyche/images/thumbs/14.2.jpg", "label": "The Prison" },
-        { "image": "/the-psyche/images/thumbs/14.3.jpg", "label": "The Open Hand" }
-      ]
-    },
-    {
-      "id": "15",
+      "id": "1.4",
       "slug": "discipline",
       "seriesId": "series-1",
       "title": "Discipline",
@@ -231,13 +77,13 @@
       "status": "Complete",
       "pageCount": 3,
       "nodes": [
-        { "image": "/the-psyche/images/thumbs/15.1.jpg", "label": "Motivation" },
-        { "image": "/the-psyche/images/thumbs/15.2.jpg", "label": "The Two Wants" },
-        { "image": "/the-psyche/images/thumbs/15.3.jpg", "label": "The Free Hand" }
+        { "image": "/the-psyche/images/thumbs/1.4.1.jpg", "label": "Motivation" },
+        { "image": "/the-psyche/images/thumbs/1.4.2.jpg", "label": "The Two Wants" },
+        { "image": "/the-psyche/images/thumbs/1.4.3.jpg", "label": "The Free Hand" }
       ]
     },
     {
-      "id": "16",
+      "id": "1.5",
       "slug": "purpose",
       "seriesId": "series-1",
       "title": "Purpose",
@@ -245,9 +91,163 @@
       "status": "Complete",
       "pageCount": 3,
       "nodes": [
-        { "image": "/the-psyche/images/thumbs/16.1.jpg", "label": "The Why" },
-        { "image": "/the-psyche/images/thumbs/16.2.jpg", "label": "Not Happiness" },
-        { "image": "/the-psyche/images/thumbs/16.3.jpg", "label": "The Direction" }
+        { "image": "/the-psyche/images/thumbs/1.5.1.jpg", "label": "The Why" },
+        { "image": "/the-psyche/images/thumbs/1.5.2.jpg", "label": "Not Happiness" },
+        { "image": "/the-psyche/images/thumbs/1.5.3.jpg", "label": "The Direction" }
+      ]
+    },
+    {
+      "id": "2.1",
+      "slug": "you-are-what-you-eat",
+      "seriesId": "series-2",
+      "title": "You Are What You Eat",
+      "tagline": "Your thoughts feel authored by you — but on this front chemistry holds the pen, and the fork is how you take it back.",
+      "status": "Complete",
+      "pageCount": 3,
+      "nodes": [
+        { "image": "/the-psyche/images/thumbs/2.1.1.jpg", "label": "The Plate" },
+        { "image": "/the-psyche/images/thumbs/2.1.2.jpg", "label": "The Gut" },
+        { "image": "/the-psyche/images/thumbs/2.1.3.jpg", "label": "The Mind" }
+      ]
+    },
+    {
+      "id": "2.2",
+      "slug": "minerals",
+      "seriesId": "series-2",
+      "title": "Minerals",
+      "tagline": "You are, in part, a short list of elements — and the mind you call yours runs on whether they are there or not.",
+      "status": "Complete",
+      "pageCount": 3,
+      "nodes": [
+        { "image": "/the-psyche/images/thumbs/2.2.1.jpg", "label": "The Elements" },
+        { "image": "/the-psyche/images/thumbs/2.2.2.jpg", "label": "The List" },
+        { "image": "/the-psyche/images/thumbs/2.2.3.jpg", "label": "The Drain" }
+      ]
+    },
+    {
+      "id": "2.3",
+      "slug": "smoking",
+      "seriesId": "series-2",
+      "title": "Smoking",
+      "tagline": "It does not add calm. It drills a hole and sells you the filling — the purest need a substance ever built for itself.",
+      "status": "Complete",
+      "pageCount": 4,
+      "nodes": [
+        { "image": "/the-psyche/images/thumbs/2.3.1.jpg", "label": "The Hole" },
+        { "image": "/the-psyche/images/thumbs/2.3.2.jpg", "label": "The Calm" },
+        { "image": "/the-psyche/images/thumbs/2.3.3.jpg", "label": "The Loop" }
+      ]
+    },
+    {
+      "id": "2.4",
+      "slug": "liquid-courage",
+      "seriesId": "series-2",
+      "title": "Alcohol",
+      "tagline": "The anti-agency drug — the alibi you buy in advance, and the refuge that teaches you to run.",
+      "status": "Complete",
+      "pageCount": 4,
+      "nodes": [
+        { "image": "/the-psyche/images/thumbs/2.4.1.jpg", "label": "Alcohol" },
+        { "image": "/the-psyche/images/thumbs/2.4.2.jpg", "label": "The Alibi" },
+        { "image": "/the-psyche/images/thumbs/2.4.3.jpg", "label": "The Refuge" }
+      ]
+    },
+    {
+      "id": "2.5",
+      "slug": "sugar",
+      "seriesId": "series-2",
+      "title": "Sugar",
+      "tagline": "The pleasure arrives upfront; the cost is posted to an address you never check — like the slow caramelising of the very machine you live in, which you never feel.",
+      "status": "Complete",
+      "pageCount": 4,
+      "nodes": [
+        { "image": "/the-psyche/images/thumbs/2.5.1.jpg", "label": "Sugar" },
+        { "image": "/the-psyche/images/thumbs/2.5.2.jpg", "label": "The Caramel" },
+        { "image": "/the-psyche/images/thumbs/2.5.3.jpg", "label": "No Receipt" }
+      ]
+    },
+    {
+      "id": "2.6",
+      "slug": "first-light",
+      "seriesId": "series-2",
+      "title": "Sleep",
+      "tagline": "Forget the eight-hour law sold past its evidence — the real lever is whether you rise to claim the day, or wait to be told what it will be.",
+      "status": "Complete",
+      "pageCount": 4,
+      "nodes": [
+        { "image": "/the-psyche/images/thumbs/2.6.1.jpg", "label": "Sleep" },
+        { "image": "/the-psyche/images/thumbs/2.6.2.jpg", "label": "The Number" },
+        { "image": "/the-psyche/images/thumbs/2.6.3.jpg", "label": "The Claim" }
+      ]
+    },
+    {
+      "id": "3.1",
+      "slug": "the-bottomless-bowl",
+      "seriesId": "series-3",
+      "title": "The Bottomless Bowl",
+      "tagline": "A beggar's cup that gold cannot fill — because it is made of the same wanting that is still open in you.",
+      "status": "Complete",
+      "pageCount": 3,
+      "nodes": [
+        { "image": "/the-psyche/images/thumbs/3.1.1.jpg", "label": "The Bowl" },
+        { "image": "/the-psyche/images/thumbs/3.1.2.jpg", "label": "The Chase" },
+        { "image": "/the-psyche/images/thumbs/3.1.3.jpg", "label": "The Ledger" }
+      ]
+    },
+    {
+      "id": "3.2",
+      "slug": "the-counterfeit",
+      "seriesId": "series-3",
+      "title": "The Counterfeit",
+      "tagline": "Most of what is sold as gratitude is a way of not feeling — a polite lid on grief and anger. That is not the practice. It is another bar of the cage.",
+      "status": "Complete",
+      "pageCount": 3,
+      "nodes": [
+        { "image": "/the-psyche/images/thumbs/3.2.1.jpg", "label": "The Lid" },
+        { "image": "/the-psyche/images/thumbs/3.2.2.jpg", "label": "The Bar" },
+        { "image": "/the-psyche/images/thumbs/3.2.3.jpg", "label": "The Lens" }
+      ]
+    },
+    {
+      "id": "3.3",
+      "slug": "gratitude",
+      "seriesId": "series-3",
+      "title": "Gratitude",
+      "tagline": "Not the feeling on command, but the deliberate act of reading what you already have as a field to work in rather than a poverty to escape — kept alive without killing the want.",
+      "status": "Complete",
+      "pageCount": 3,
+      "nodes": [
+        { "image": "/the-psyche/images/thumbs/3.3.1.jpg", "label": "The Move" },
+        { "image": "/the-psyche/images/thumbs/3.3.2.jpg", "label": "Overflow" },
+        { "image": "/the-psyche/images/thumbs/3.3.3.jpg", "label": "The Bowl" }
+      ]
+    },
+    {
+      "id": "4.1",
+      "slug": "underinvestment",
+      "seriesId": "series-4",
+      "title": "Underinvestment",
+      "tagline": "The part of you that decides files the person you'll become as a stranger — so you keep mailing them the bill, and mistake it for freedom.",
+      "status": "Complete",
+      "pageCount": 3,
+      "nodes": [
+        { "image": "/the-psyche/images/thumbs/4.1.1.jpg", "label": "The Stranger" },
+        { "image": "/the-psyche/images/thumbs/4.1.2.jpg", "label": "The Bill" },
+        { "image": "/the-psyche/images/thumbs/4.1.3.jpg", "label": "The Bridge" }
+      ]
+    },
+    {
+      "id": "4.2",
+      "slug": "overinvestment",
+      "seriesId": "series-4",
+      "title": "Overinvestment",
+      "tagline": "You can't let go of it because you already spent the future on it — it became your plans, your identity, your story, and releasing it now would demolish a self you already live inside.",
+      "status": "Complete",
+      "pageCount": 3,
+      "nodes": [
+        { "image": "/the-psyche/images/thumbs/4.2.1.jpg", "label": "The Blueprint" },
+        { "image": "/the-psyche/images/thumbs/4.2.2.jpg", "label": "The Prison" },
+        { "image": "/the-psyche/images/thumbs/4.2.3.jpg", "label": "The Open Hand" }
       ]
     }
   ]

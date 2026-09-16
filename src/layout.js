@@ -150,7 +150,7 @@ export function generateStoryHTML(caseId, storySlug, pageData, allPages, prevLin
   // dateModified falls back to the published date.
   const isoDate = toISODate(pageData.date);
   const isoEdited = toISODate(pageData.edited) || isoDate;
-  const crumbCaseName = caseTitle || `Case File 0${caseId}`;
+  const crumbCaseName = caseTitle || `Case File ${caseId}`;
   const jsonLdScript = jsonLdScriptTag({
     "@context": "https://schema.org",
     "@graph": [
@@ -539,7 +539,7 @@ export function generateStoryHTML(caseId, storySlug, pageData, allPages, prevLin
     </a>
 
     <div class="document">
-      <div class="metadata">Case File 0${caseId}</div>
+      <div class="metadata">Case File ${caseId}</div>
       <div class="date-meta">Published: ${pageData.date}</div>
       ${pageData.edited && pageData.edited !== pageData.date ? `<div class="date-meta-edited">Edited: ${pageData.edited}</div>` : ''}
       <div class="page-counter">Exhibit ${pageData.page} of ${total}</div>
