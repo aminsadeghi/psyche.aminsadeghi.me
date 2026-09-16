@@ -402,82 +402,80 @@
     });
   }
 
-  // --- 4. The Body's Ledger (pyramid + character above) ---
+  // --- 4. The Body's Ledger (ledger rows: label column + entries) ---
   function buildBody() {
-    const PAD = 90, B = atlas.bodyLedger, cx = PAD + 430;
-    const CARD_W = 200, STEP = CARD.h + 26;
+    const PAD = 90, B = atlas.bodyLedger;
+    const CARD_W = 186, CGAP = 16, LABEL_W = 236, LGAP = 34, ROW_GAP = 14;
+    const rowH = CARD.h + 24;
+
+    // rows, base-up order: thieves ... baseline, then the whole plate
+    const rows = B.tiers.map(t => ({ label: t.label, cases: t.cases }))
+      .concat([{ label: B.frame.label, cases: B.frame.cases, frame: true }]);
+    const maxCards = Math.max(...rows.map(r => r.cases.filter(id => caseById[id]).length));
+    const cardsW = maxCards * (CARD_W + CGAP) - CGAP;
+    const rowW = LABEL_W + LGAP + cardsW + 28;
+    const leftX = PAD;
+    const cx = leftX + rowW / 2;
+
     let y = PAD;
-
-    // character cases floating above
-    addLabel(cx - 300, y, `<div class="fl-kicker">${esc(B.above.label)}</div>`, 600);
-    y += 34;
+    // character cases floating above the engine
+    addLabel(leftX, y, `<div class="fl-kicker">${esc(B.above.label)}</div>`, rowW);
+    y += 30;
     const above = B.above.cases.filter(id => caseById[id]);
-    const aW = above.length * (CARD_W + 20);
-    let ax = cx - aW / 2 + 10;
-    above.forEach(id => { addCard(id, ax, y, { w: CARD_W }); ax += CARD_W + 20; });
-    y += CARD.h + 54;
+    let ax = cx - (above.length * (CARD_W + CGAP) - CGAP) / 2;
+    above.forEach(id => { addCard(id, ax, y, { w: CARD_W }); ax += CARD_W + CGAP; });
+    y += CARD.h + 42;
 
-    // divider caption
-    addLabel(cx - 300, y, `<div class="fl-note" style="text-align:center;width:600px;margin:0">A shortage below arrives disguised as a mood above. Suspect the machine first.</div>`, 600);
-    y += 44;
+    addLabel(leftX, y, `<div class="fl-note" style="text-align:center;width:${rowW}px;margin:0">A shortage below arrives disguised as a mood above. Suspect the machine before you indict the self.</div>`, rowW);
+    y += 40;
 
-    // pyramid: widening tiers, base last
-    const tiers = B.tiers.slice(); // top -> down as authored (Thieves ... Baseline)
-    const rowH = CARD.h + 30;
-    tiers.forEach((t, i) => {
-      const frac = i / (tiers.length - 1 || 1);            // 0 top .. 1 base
-      const halfW = 240 + frac * 300;                       // widen toward base
-      addRegion(cx - halfW, y, halfW * 2, rowH, '', '', { });
-      addLabel(cx - halfW + 18, y + 12, `<div class="region-idx" style="color:#c5a059">${esc(t.label)}</div>`, halfW * 2 - 36);
-      const cs = t.cases.filter(id => caseById[id]);
-      const w = cs.length * (CARD_W + 18);
-      let px = cx - w / 2 + 9;
-      const py = y + (rowH - CARD.h) / 2 + 6;
-      cs.forEach(id => { addCard(id, px, py, { w: CARD_W }); px += CARD_W + 18; });
-      y += rowH + 16;
+    // the ledger — uniform rows
+    rows.forEach(r => {
+      addRegion(leftX, y, rowW, rowH, '', '', r.frame ? { plain: true } : {});
+      addLabel(leftX + 22, y + rowH / 2 - 12, `<div class="region-idx">${esc(r.label)}</div>`, LABEL_W);
+      const cs = r.cases.filter(id => caseById[id]);
+      let px = leftX + LABEL_W + LGAP;
+      const py = y + (rowH - CARD.h) / 2;
+      cs.forEach(id => { addCard(id, px, py, { w: CARD_W }); px += CARD_W + CGAP; });
+      y += rowH + ROW_GAP;
     });
-
-    // frame case (the whole plate) at the very base
-    const fr = B.frame.cases.filter(id => caseById[id]);
-    if (fr.length) {
-      addLabel(cx - 300, y + 6, `<div class="fl-kicker" style="text-align:center;width:600px">${esc(B.frame.label)}</div>`, 600);
-      let fx = cx - (fr.length * (CARD_W + 18)) / 2 + 9;
-      fr.forEach(id => { addCard(id, fx, y + 30, { w: CARD_W }); fx += CARD_W + 18; });
-    }
   }
 
-  // --- 5. The Two Hungers (the gap) ---
+  // --- 5. The Two Hungers (the gap between two poles) ---
   function buildHungers() {
     const PAD = 90, T = atlas.twoHungers;
-    const laneY = PAD + 150, POLE_W = 200;
     const gap = T.gap.filter(id => caseById[id]);
-    const CARD_W = 200, STEP = CARD_W + 40;
-    const gapW = gap.length * STEP;
+    const CARD_W = 194, STEP = CARD_W + 44;
+    const POLE_W = 188, POLE_H = CARD.h + 92;
+    const laneY = PAD + 150;
+    const cardsY = laneY;
+    const spineY = laneY - 24;
     const leftX = PAD;
-    const gapX = leftX + POLE_W + 70;
-    const rightX = gapX + gapW + 40;
+    const gapX = leftX + POLE_W + 58;
+    const gapW = gap.length * STEP - (STEP - CARD_W);
+    const rightX = gapX + gapW + 58;
 
-    // poles
-    addRegion(leftX, laneY - 70, POLE_W, 260, T.left.label, T.left.note, {});
-    addRegion(rightX, laneY - 70, POLE_W, 260, T.right.label, T.right.note, {});
-    addLabel(gapX, PAD, `<div class="fl-kicker">The Gap</div><div class="fl-note" style="width:${gapW}px">Where the trap is built. Engineered things widen it — maximal pull, minimal payoff.</div>`, gapW);
+    addLabel(gapX, PAD - 6, `<div class="fl-kicker">The Gap</div><div class="fl-note" style="width:${gapW}px">Where the trap is built. Engineered things widen it — maximal pull, minimal payoff.</div>`, gapW);
 
-    // connecting spine across the gap
-    line(leftX + POLE_W, laneY + 60, rightX, laneY + 60, 'bus');
+    // the two poles bracket the cards
+    addRegion(leftX, laneY - 42, POLE_W, POLE_H, T.left.label, T.left.note, {});
+    addRegion(rightX, laneY - 42, POLE_W, POLE_H, T.right.label, T.right.note, {});
 
+    // spine + a bead over each card
+    line(leftX + POLE_W, spineY, rightX, spineY, 'bus');
     let x = gapX;
-    gap.forEach((id, i) => {
-      const yOff = (i % 2 === 0) ? 0 : 150; // stagger
-      const py = laneY + yOff;
-      dotAt(x + CARD_W / 2, laneY + 60);
-      line(x + CARD_W / 2, laneY + 60, x + CARD_W / 2, py + (yOff ? -6 : CARD.h + 6));
-      addCard(id, x, py, { w: CARD_W });
+    gap.forEach(id => {
+      const bx = x + CARD_W / 2;
+      dotAt(bx, spineY);
+      line(bx, spineY, bx, cardsY - 4);
+      addCard(id, x, cardsY, { w: CARD_W });
       x += STEP;
     });
 
-    // exit
-    addHub(rightX, laneY + 210, POLE_W, 96,
-      `<div class="r-title" style="font-size:20px">${esc(T.exit.label)}</div><div class="r-sub">${esc(T.exit.note)}</div>`);
+    // the exit, beneath the Liking pole
+    addHub(rightX - 6, laneY - 42 + POLE_H + 26, POLE_W + 12, 148,
+      `<div class="r-title" style="font-size:19px;margin-bottom:8px">${esc(T.exit.label)}</div>` +
+      `<div style="font-size:11.5px;line-height:1.55;color:#9aa6b6;font-style:italic">${esc(T.exit.note)}</div>`);
   }
 
   const BUILDERS = {
@@ -583,6 +581,10 @@
   document.getElementById('zoom-in').onclick = () => centerZoom(1.25);
   document.getElementById('zoom-out').onclick = () => centerZoom(0.8);
   document.getElementById('zoom-reset').onclick = fitCurrent;
+
+  // Re-fit when the window resizes or rotates (debounced).
+  let _rt;
+  window.addEventListener('resize', () => { clearTimeout(_rt); _rt = setTimeout(fitCurrent, 150); });
 
   setTimeout(() => { const h = document.getElementById('hint'); if (h) h.style.opacity = '0'; }, 4500);
 
