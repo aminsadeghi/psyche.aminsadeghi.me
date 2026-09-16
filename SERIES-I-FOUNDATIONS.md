@@ -62,10 +62,23 @@ hard question it answers**.
    **No motto** — saved for Purpose. Research + method in `DISCIPLINE.md`. Placeholder
    thumbs (15.1–15.3, copied from the Cage).
 5. **Purpose** — *"A person who has a why can bear almost any how."* Without a why, no
-   technique saves you. *(Could instead be the series capstone rather than a
-   foundation — decide later.)*
+   technique saves you. **DONE (16/09/2026) — the CAPSTONE.** Shipped as case id 16
+   (**Purpose**, slug `purpose`, 3 pages: The Why / Not Happiness / Direction, Not
+   Destination). Built anti-sentimental (Gemini flagged the risk): Nietzsche-via-Frankl
+   (a why is a load-bearing beam, not a feeling), meaning ≠ happiness (Baumeister,
+   hedged), purpose is *built not found* (O'Keefe/Dweck/Walton — "find your passion"
+   fails), and a durable why is a direction not a destination (Overinvestment callback).
+   Gathers all four prior foundations as "capacity"; **closes on the motto** as the
+   series' final word. Research + method in `PURPOSE.md`. Placeholder thumbs (16.1–16.3).
 
 Arc: **Worth → Agency → Fear → Discipline → Purpose.**
+
+**★ SERIES I COMPLETE (16/09/2026) — all five Foundations built** (cases 1, 2, 3, 15, 16;
+pages 7 + 6 + 3 + 3 + 3). The character set is finished: worth built, agency claimed, fear
+un-costumed, discipline structured, purpose chosen. The motto now bookends the series — it
+opens the Scoreboard's climb and closes Purpose's capstone (and also lands the Cage). The
+Shame/Avoidance coda still bridges Worth → Agency. Remaining across all five: real
+thumbnails (several cases still on placeholders) and deploy.
 
 ---
 

@@ -235,6 +235,20 @@
         { "image": "/the-psyche/images/thumbs/15.2.jpg", "label": "The Two Wants" },
         { "image": "/the-psyche/images/thumbs/15.3.jpg", "label": "The Free Hand" }
       ]
+    },
+    {
+      "id": "16",
+      "slug": "purpose",
+      "seriesId": "series-1",
+      "title": "Purpose",
+      "tagline": "A why is not a feeling but a beam that carries load — and it is built, not found. The capstone of the Foundations: worth, agency, fear and discipline are all capacity; purpose is the answer to what the capacity is for.",
+      "status": "Complete",
+      "pageCount": 3,
+      "nodes": [
+        { "image": "/the-psyche/images/thumbs/16.1.jpg", "label": "The Why" },
+        { "image": "/the-psyche/images/thumbs/16.2.jpg", "label": "Not Happiness" },
+        { "image": "/the-psyche/images/thumbs/16.3.jpg", "label": "The Direction" }
+      ]
     }
   ]
 }
