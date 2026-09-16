@@ -221,6 +221,20 @@
         { "image": "/the-psyche/images/thumbs/14.2.jpg", "label": "The Prison" },
         { "image": "/the-psyche/images/thumbs/14.3.jpg", "label": "The Open Hand" }
       ]
+    },
+    {
+      "id": "15",
+      "slug": "discipline",
+      "seriesId": "series-1",
+      "title": "Discipline",
+      "tagline": "Motivation is a mood, and you have been waiting for a wind that never comes. The disciplined are not the ones straining hardest — they have stopped letting the smallest want cast the deciding vote, and built a life where the right thing is the default.",
+      "status": "Complete",
+      "pageCount": 3,
+      "nodes": [
+        { "image": "/the-psyche/images/thumbs/15.1.jpg", "label": "Motivation" },
+        { "image": "/the-psyche/images/thumbs/15.2.jpg", "label": "The Two Wants" },
+        { "image": "/the-psyche/images/thumbs/15.3.jpg", "label": "The Free Hand" }
+      ]
     }
   ]
 }

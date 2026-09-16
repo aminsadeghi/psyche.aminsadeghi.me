@@ -53,7 +53,14 @@ hard question it answers**.
    Cage) — real art still to come.
 4. **Discipline / self-mastery** — *"Discipline is choosing what you want most over
    what you want now."* Motivation is a liar; acting when you don't feel like it is
-   freedom.
+   freedom. **DONE (16/09/2026)** — shipped as case id 15 (**Discipline**, slug
+   `discipline`, 3 pages: Motivation / The Two Wants / The Free Hand). Built on
+   behavioural activation (act before the feeling, hedged past the clinic) and the
+   self-control paradox (the willpower is in the architecture, not the moment);
+   retires willpower-as-muscle + the marshmallow test. Opens off Fear's "feed the
+   move," closes on the Cage-turned-inward and seeds Purpose (the how needs a why).
+   **No motto** — saved for Purpose. Research + method in `DISCIPLINE.md`. Placeholder
+   thumbs (15.1–15.3, copied from the Cage).
 5. **Purpose** — *"A person who has a why can bear almost any how."* Without a why, no
    technique saves you. *(Could instead be the series capstone rather than a
    foundation — decide later.)*
