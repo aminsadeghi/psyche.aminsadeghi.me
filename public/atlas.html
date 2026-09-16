@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Atlas | The Psyche</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="The Atlas — the whole map of The Psyche: every series and case file, laid out as one tree you can roam.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<style>
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background-color: #050e1b;
+    background-image: radial-gradient(circle at top right, #111d2e 0%, #050e1b 100%);
+    color: #c7cfdb;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+
+  /* Close pill (top-right) — the shared Mythos pattern. */
+  .st-close {
+    position: fixed; top: 22px; right: 44px; z-index: 60;
+    display: flex; align-items: center; gap: 12px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.24em;
+    color: #9AA1A9; background: rgba(5,14,27,0.55); border: 1px solid rgba(197, 160, 89, 0.35);
+    padding: 9px 16px; cursor: pointer; text-decoration: none;
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    transition: border-color .2s ease, color .2s ease;
+  }
+  .st-close .cs-x { color: #C5A059; }
+  .st-close:hover { border-color: #C5A059; color: #F2EEE6; }
+
+  /* Title block (top-left) */
+  .atlas-head { position: fixed; top: 22px; left: 44px; z-index: 55; pointer-events: none; }
+  .atlas-title { font-family: "Times New Roman", Times, serif; font-size: 30px; color: #fff; line-height: 1; }
+  .atlas-sub { color: #c5a059; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; margin-top: 7px; }
+
+  /* Pan/zoom viewport */
+  .viewport {
+    position: fixed; inset: 0;
+    overflow: hidden;
+    cursor: grab;
+    touch-action: none;
+    background:
+      radial-gradient(circle at 22% 12%, rgba(197,160,89,0.05), transparent 45%),
+      radial-gradient(circle at 78% 80%, rgba(197,160,89,0.04), transparent 40%);
+  }
+  .viewport.dragging { cursor: grabbing; }
+
+  .world { position: absolute; top: 0; left: 0; transform-origin: 0 0; will-change: transform; }
+  .lines { position: absolute; top: 0; left: 0; pointer-events: none; overflow: visible; }
+  .lines path { fill: none; stroke: rgba(197,160,89,0.42); stroke-width: 1.6; stroke-dasharray: 6 6; }
+  .lines .bus { stroke: rgba(197,160,89,0.30); }
+  .dot { fill: #c5a059; }
+  .dot-glow { fill: rgba(197,160,89,0.28); }
+
+  .node { position: absolute; }
+
+  /* Root node */
+  .n-root {
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 14px 20px;
+    background: linear-gradient(160deg, #14223a 0%, #0a1424 100%);
+    border: 1px solid rgba(197,160,89,0.55);
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.55), inset 0 0 24px rgba(197,160,89,0.06);
+  }
+  .n-root .r-title { font-family: "Times New Roman", Times, serif; font-size: 26px; color: #ebd299; line-height: 1; }
+  .n-root .r-sub { font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 2.5px; text-transform: uppercase; color: #8a9bb1; margin-top: 9px; }
+
+  /* Series node */
+  .n-series {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 13px 18px;
+    background: linear-gradient(90deg, rgba(197,160,89,0.16) 0%, rgba(197,160,89,0.04) 100%);
+    border: 1px solid rgba(197,160,89,0.34); border-left: 3px solid #c5a059;
+    border-radius: 10px;
+    box-shadow: 0 12px 26px rgba(0,0,0,0.5);
+  }
+  .n-series .s-num { font-family: "Times New Roman", Times, serif; font-style: italic; font-size: 13px; color: #c5a059; }
+  .n-series .s-title { font-family: "Times New Roman", Times, serif; font-size: 21px; color: #fff; line-height: 1.05; margin-top: 2px; }
+  .n-series .s-count { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: #64748b; margin-top: 7px; }
+
+  /* Case card */
+  .n-case {
+    display: flex; flex-direction: column;
+    background: #0a0f19; border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 9px; overflow: hidden;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.55);
+    text-decoration: none; color: inherit;
+    transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  }
+  a.n-case { cursor: pointer; }
+  a.n-case:hover {
+    transform: translateY(-3px);
+    border-color: rgba(197,160,89,0.7);
+    box-shadow: 0 20px 42px rgba(0,0,0,0.6), 0 0 0 1px rgba(197,160,89,0.25);
+  }
+  .c-thumb {
+    height: 74px; width: 100%; flex: 0 0 auto; position: relative;
+    background: linear-gradient(135deg, #16233a, #0a1120);
+  }
+  .c-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(35%) contrast(1.12); }
+  .c-badge {
+    position: absolute; top: 7px; left: 7px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 1px;
+    color: #ebd299; background: rgba(5,14,27,0.72); border: 1px solid rgba(197,160,89,0.4);
+    padding: 2px 7px; border-radius: 5px;
+  }
+  .c-soon {
+    position: absolute; top: 7px; right: 7px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: #8a9bb1; background: rgba(5,14,27,0.72); border: 1px solid rgba(255,255,255,0.14);
+    padding: 2px 6px; border-radius: 5px;
+  }
+  .c-body { padding: 11px 13px 12px; display: flex; flex-direction: column; flex: 1 1 auto; }
+  .c-title { font-family: "Times New Roman", Times, serif; font-size: 16px; color: #e8edf4; line-height: 1.2; }
+  a.n-case:hover .c-title { color: #fff; }
+  .c-foot {
+    margin-top: auto; padding-top: 9px; display: flex; align-items: center; justify-content: space-between;
+    font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: #64748b;
+  }
+  .c-foot .c-read { color: #c5a059; }
+
+  /* Node connection dot on each card top */
+  .node-cap { position: absolute; top: -5px; left: 50%; transform: translateX(-50%); width: 9px; height: 9px; background: #c5a059; border-radius: 50%; box-shadow: 0 0 9px #c5a059; z-index: 3; }
+
+  /* Zoom controls (bottom-right) */
+  .zoom-ctl {
+    position: fixed; right: 24px; bottom: 26px; z-index: 55;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .zoom-ctl button {
+    width: 40px; height: 40px; border-radius: 9px;
+    background: rgba(10,15,25,0.75); border: 1px solid rgba(197,160,89,0.35);
+    color: #d4b26a; font-size: 20px; line-height: 1; cursor: pointer;
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    display: flex; align-items: center; justify-content: center;
+    transition: border-color .2s ease, color .2s ease, background .2s ease;
+  }
+  .zoom-ctl button:hover { border-color: #c5a059; color: #fff; background: rgba(197,160,89,0.18); }
+  .zoom-ctl .z-reset { font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 1.5px; }
+
+  /* Hint (bottom-left) */
+  .atlas-hint {
+    position: fixed; left: 44px; bottom: 26px; z-index: 55; pointer-events: none;
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: #4a5a70; transition: opacity .5s ease;
+  }
+
+  @media (max-width: 800px) {
+    .st-close { top: 12px; right: 14px; padding: 7px 12px; }
+    .st-close span:first-child { display: none; }
+    .atlas-head { top: 12px; left: 16px; }
+    .atlas-title { font-size: 22px; }
+    .zoom-ctl { right: 12px; bottom: 16px; }
+    .atlas-hint { left: 16px; bottom: 18px; font-size: 9px; letter-spacing: 1.5px; }
+  }
+</style>
+</head>
+<body>
+
+<a class="st-close" href="/" aria-label="Return to The Psyche home"><span>CLOSE</span><span class="cs-x">&times;</span></a>
+
+<div class="atlas-head">
+  <div class="atlas-title">Atlas</div>
+  <div class="atlas-sub">The Whole Map</div>
+</div>
+
+<div class="viewport" id="viewport">
+  <div class="world" id="world">
+    <svg class="lines" id="lines"></svg>
+    <!-- nodes injected here -->
+  </div>
+</div>
+
+<div class="atlas-hint" id="hint">Drag to move &middot; Scroll to zoom</div>
+
+<div class="zoom-ctl">
+  <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+  <button type="button" id="zoom-out" aria-label="Zoom out">&minus;</button>
+  <button type="button" class="z-reset" id="zoom-reset" aria-label="Reset view">FIT</button>
+</div>
+
+<script>
+  // ---- Layout constants (world units = px at scale 1) ----
+  const ROOT   = { w: 260, h: 96 };
+  const SERIES = { w: 230, h: 96 };
+  const CASE   = { w: 230, h: 150 };
+  const COL_GAP  = 74;                 // gap between series columns
+  const COL_W    = CASE.w + COL_GAP;   // column stride
+  const CASE_VGAP = 34;                // vertical gap between stacked cases
+  const CASE_STEP = CASE.h + CASE_VGAP;
+  const PAD      = 90;
+  const ROOT_Y   = PAD;
+  const SERIES_Y = ROOT_Y + ROOT.h + 92;
+  const CASE_Y0  = SERIES_Y + SERIES.h + 78;
+
+  const world = document.getElementById('world');
+  const svg   = document.getElementById('lines');
+  const viewport = document.getElementById('viewport');
+
+  const esc = s => String(s == null ? '' : s);
+
+  let worldW = 1200, worldH = 800;
+
+  function romanOf(series) {
+    return (series.title.split(' ')[1] || series.title).trim();
+  }
+
+  function build(catalog) {
+    // Only series that actually have cases become columns.
+    const cols = catalog.series
+      .map(s => ({ series: s, cases: catalog.cases.filter(c => c.seriesId === s.id) }))
+      .filter(col => col.cases.length > 0);
+
+    const nCols = cols.length;
+    const contentW = nCols * CASE.w + (nCols - 1) * COL_GAP;
+    worldW = contentW + PAD * 2;
+    const maxCases = cols.reduce((m, c) => Math.max(m, c.cases.length), 0);
+    worldH = CASE_Y0 + maxCases * CASE_STEP - CASE_VGAP + PAD;
+
+    world.style.width  = worldW + 'px';
+    world.style.height = worldH + 'px';
+    svg.setAttribute('width', worldW);
+    svg.setAttribute('height', worldH);
+    svg.setAttribute('viewBox', `0 0 ${worldW} ${worldH}`);
+
+    const rootX = worldW / 2;
+    const colX = i => PAD + CASE.w / 2 + i * COL_W;   // center x of column i
+
+    let paths = '';
+    let dots = '';
+    const dotAt = (x, y) => {
+      dots += `<circle class="dot-glow" cx="${x}" cy="${y}" r="7"></circle>` +
+              `<circle class="dot" cx="${x}" cy="${y}" r="3.2"></circle>`;
+    };
+
+    // Root -> series bus (orthogonal elbow connectors)
+    const rootBottom = ROOT_Y + ROOT.h;
+    const busY = rootBottom + (SERIES_Y - rootBottom) / 2;
+    paths += `<path class="bus" d="M ${rootX} ${rootBottom} L ${rootX} ${busY}"></path>`;
+    if (nCols > 1) {
+      paths += `<path class="bus" d="M ${colX(0)} ${busY} L ${colX(nCols - 1)} ${busY}"></path>`;
+    }
+    cols.forEach((_, i) => {
+      paths += `<path class="bus" d="M ${colX(i)} ${busY} L ${colX(i)} ${SERIES_Y}"></path>`;
+    });
+
+    // ---- Nodes ----
+    let nodes = '';
+
+    // Root
+    nodes += node('n-root', rootX - ROOT.w / 2, ROOT_Y, ROOT.w, ROOT.h,
+      `<div class="r-title">The Psyche</div>` +
+      `<div class="r-sub">${catalog.cases.length} Cases &middot; ${nCols} Series</div>`);
+
+    cols.forEach((col, i) => {
+      const cx = colX(i);
+      const s = col.series;
+      // Series node
+      nodes += node('n-series', cx - SERIES.w / 2, SERIES_Y, SERIES.w, SERIES.h,
+        `<div class="s-num">Series ${esc(romanOf(s))}</div>` +
+        `<div class="s-title">${esc(s.subtitle)}</div>` +
+        `<div class="s-count">${col.cases.length} ${col.cases.length === 1 ? 'Case' : 'Cases'}</div>`);
+
+      // Spine: series bottom -> first case, then case -> case
+      const seriesBottom = SERIES_Y + SERIES.h;
+      let prevBottom = seriesBottom;
+      col.cases.forEach((c, k) => {
+        const y = CASE_Y0 + k * CASE_STEP;
+        paths += `<path d="M ${cx} ${prevBottom} L ${cx} ${y}"></path>`;
+        dotAt(cx, y);
+        nodes += caseCard(c, cx - CASE.w / 2, y, catalog);
+        prevBottom = y + CASE.h;
+      });
+    });
+
+    svg.innerHTML = paths + dots;
+    world.insertAdjacentHTML('beforeend', nodes);
+  }
+
+  function node(cls, x, y, w, h, inner) {
+    return `<div class="node ${cls}" style="left:${x}px;top:${y}px;width:${w}px;height:${h}px">${inner}</div>`;
+  }
+
+  function caseCard(c, x, y, catalog) {
+    const readable = c.pageCount > 0 && (c.status || '').toLowerCase() !== 'coming soon';
+    const img = (c.nodes && c.nodes[0] && c.nodes[0].image) ? c.nodes[0].image : '';
+    const foot = readable
+      ? `<span>${c.pageCount} ${c.pageCount === 1 ? 'Page' : 'Pages'}</span><span class="c-read">Read &rarr;</span>`
+      : `<span>${esc(c.status || 'Coming Soon')}</span>`;
+    const inner =
+      `<div class="node-cap"></div>` +
+      `<div class="c-thumb">` +
+        (img ? `<img src="${esc(img)}" alt="" loading="lazy" onerror="this.style.display='none'">` : '') +
+        `<span class="c-badge">${esc(c.id)}</span>` +
+        (readable ? '' : `<span class="c-soon">Soon</span>`) +
+      `</div>` +
+      `<div class="c-body">` +
+        `<div class="c-title">${esc(c.title)}</div>` +
+        `<div class="c-foot">${foot}</div>` +
+      `</div>`;
+    const style = `left:${x}px;top:${y}px;width:${CASE.w}px;height:${CASE.h}px`;
+    return readable
+      ? `<a class="node n-case" href="/case-file/${esc(c.slug)}/start" style="${style}" data-nav="1">${inner}</a>`
+      : `<div class="node n-case" style="${style}">${inner}</div>`;
+  }
+
+  // ---- Pan / zoom ----
+  let scale = 1, tx = 0, ty = 0;
+  const MIN = 0.22, MAX = 2.4;
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+
+  function apply() {
+    world.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
+  }
+
+  function fit() {
+    const vw = viewport.clientWidth, vh = viewport.clientHeight;
+    const margin = 48;
+    let s = Math.min((vw - margin) / worldW, (vh - margin) / worldH);
+    s = clamp(s, MIN, 1);
+    scale = s;
+    tx = (vw - worldW * s) / 2;
+    ty = Math.max(26, Math.min((vh - worldH * s) / 2, 40)); // top-biased so the root shows
+    apply();
+  }
+
+  function zoomAt(cx, cy, factor) {
+    const ns = clamp(scale * factor, MIN, MAX);
+    if (ns === scale) return;
+    tx = cx - (cx - tx) * (ns / scale);
+    ty = cy - (cy - ty) * (ns / scale);
+    scale = ns;
+    apply();
+  }
+
+  // Pointer-based drag + pinch (mouse + touch unified)
+  const pointers = new Map();
+  let moved = 0, pinchDist = 0, pinchMid = null;
+
+  viewport.addEventListener('pointerdown', e => {
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pointers.size === 1) { moved = 0; viewport.classList.add('dragging'); }
+    if (pointers.size === 2) {
+      const p = [...pointers.values()];
+      pinchDist = Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y);
+      pinchMid = midpoint(p);
+    }
+    viewport.setPointerCapture(e.pointerId);
+  });
+
+  viewport.addEventListener('pointermove', e => {
+    if (!pointers.has(e.pointerId)) return;
+    const prev = pointers.get(e.pointerId);
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+    if (pointers.size === 2) {
+      const p = [...pointers.values()];
+      const dist = Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y);
+      const mid = midpoint(p);
+      const rect = viewport.getBoundingClientRect();
+      if (pinchDist > 0) zoomAt(mid.x - rect.left, mid.y - rect.top, dist / pinchDist);
+      // pan by the movement of the midpoint
+      if (pinchMid) { tx += mid.x - pinchMid.x; ty += mid.y - pinchMid.y; apply(); }
+      pinchDist = dist; pinchMid = mid;
+      moved += 20;
+      return;
+    }
+
+    const dx = e.clientX - prev.x, dy = e.clientY - prev.y;
+    moved += Math.abs(dx) + Math.abs(dy);
+    tx += dx; ty += dy;
+    apply();
+  });
+
+  function endPointer(e) {
+    pointers.delete(e.pointerId);
+    if (pointers.size < 2) { pinchDist = 0; pinchMid = null; }
+    if (pointers.size === 0) viewport.classList.remove('dragging');
+  }
+  viewport.addEventListener('pointerup', endPointer);
+  viewport.addEventListener('pointercancel', endPointer);
+
+  // Suppress the click that follows a real drag so cards don't navigate mid-pan.
+  viewport.addEventListener('click', e => {
+    if (moved > 8) { e.preventDefault(); e.stopPropagation(); }
+  }, true);
+
+  // Wheel zoom, centered on cursor
+  viewport.addEventListener('wheel', e => {
+    e.preventDefault();
+    const rect = viewport.getBoundingClientRect();
+    const factor = Math.exp(-e.deltaY * 0.0015);
+    zoomAt(e.clientX - rect.left, e.clientY - rect.top, factor);
+  }, { passive: false });
+
+  function midpoint(p) { return { x: (p[0].x + p[1].x) / 2, y: (p[0].y + p[1].y) / 2 }; }
+
+  // Controls
+  const centerZoom = f => { const r = viewport.getBoundingClientRect(); zoomAt(r.width / 2, r.height / 2, f); };
+  document.getElementById('zoom-in').onclick  = () => centerZoom(1.25);
+  document.getElementById('zoom-out').onclick = () => centerZoom(0.8);
+  document.getElementById('zoom-reset').onclick = fit;
+
+  window.addEventListener('resize', () => { /* keep current view; user can hit FIT */ });
+
+  // Fade the hint after a moment
+  setTimeout(() => { const h = document.getElementById('hint'); if (h) h.style.opacity = '0'; }, 4200);
+
+  // ---- Boot ----
+  (async function boot() {
+    let catalog = window.__CATALOG_DATA__ || null;
+    try {
+      if (!catalog) {
+        const r = await fetch('/data/catalog.json?t=' + Date.now(), { cache: 'no-store' });
+        catalog = await r.json();
+      }
+    } catch (e) {
+      document.querySelector('.atlas-sub').textContent = 'Could not load the catalog';
+      return;
+    }
+    if (!catalog || !catalog.series) return;
+    build(catalog);
+    fit();
+  })();
+</script>
+
+</body>
+</html>
