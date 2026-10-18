@@ -1,9 +1,14 @@
 # Series V — **Shame**  ·  *planning + research doc (Claude/web leg complete)*
 
-**Status:** PLANNING (12/10/2026). Not wired into the data. Claude/web leg done (sources at the bottom);
-**next:** Amin runs the GeminiPro prompt (structure, categories, first language) and the SuperGrok prompt
-(blogs, articles, current science) — both at the bottom of this doc — then Claude reconciles, checks sources
-and fixes the language, story by story.
+**Status:** **BUILT (18/10/2026) — first draft, Claude-written** (Amin: "let's do it today, now"; the Gemini
+and SuperGrok legs were skipped and can still be run as a REVIEW pass over the live text). Wired:
+`series-5.json` (11 pages), `catalog.json` (series-5 + cases 5.1 `shame` / 5.2 `borderline` / 5.3
+`narcissism`), `atlas.json` (moves + three new symptom hubs; "five series"), `structures.json` (Curriculum
+gains floor V; new "The Verdict" structure), `aminsadeghi.me/public/menu.js` fallback 59 → 70. Extra source
+used in the build: Wetzel et al. 2020 (narcissism declines 18→41; narcissistic young adults more often
+supervisors later, and supervisors declined less) — Story 3 p3.
+**Remaining:** thumbnails `5.1.x / 5.2.x / 5.3.x` (the local `5.1.x` files are stale copies of Purpose art
+from the old numbering); deploy; optional Gemini/Grok review; the Forge finale still gathers "four" series.
 
 **The arc:** **Shame → Borderline → Narcissism.** One wound, then the two opposite ways of living with it:
 the wound with no wall, and the wound walled over. *The open wound comes before the armour.*

@@ -6,12 +6,13 @@
       "name": "The Curriculum",
       "kicker": "The whole site, as one map",
       "form": "strata",
-      "intro": "The Psyche read as a single building — four storeys of the self, raised from the ground up. Each series is one floor; each case a room on it.",
+      "intro": "The Psyche read as a single building — five storeys of the self, raised from the ground up. Each series is one floor; each case a room on it.",
       "layers": [
         { "label": "I · The Foundations", "note": "What a strong self is built on — worth, agency, fear, discipline, purpose. The character set, not the clinic's." },
         { "label": "II · The Body", "note": "The self runs on a physical engine. A shortage or a crash does not announce itself as chemistry — it wears the mask of a mood." },
         { "label": "III · The Wanting", "note": "Desire, scarcity, and the counterfeit cures — the bowl that gold cannot fill, and the gratitude that is really a lid." },
-        { "label": "IV · The Future Self", "note": "The stranger you keep mailing the bill to — the two opposite errors of under- and over-investing in who you will become." }
+        { "label": "IV · The Future Self", "note": "The stranger you keep mailing the bill to — the two opposite errors of under- and over-investing in who you will become." },
+        { "label": "V · Shame", "note": "The verdict 'I am the bad thing', and the two ways people live with it — the open wound of borderline, and the armour of narcissism." }
       ],
       "caveat": "A living outline: floors are added and reordered as the work grows. Read from the ground up — the higher rooms lean on the lower ones."
     },
@@ -70,6 +71,19 @@
         { "label": "Overinvestment", "note": "Unable to let go, because you already spent the future on it: it became your identity, and releasing it would demolish a self you already live inside." }
       ],
       "caveat": "The question is never simply 'more' or 'less'. It is honesty: a bond with a real future self, a bill mailed to a stranger, or a prison you built and moved into?"
+    },
+    {
+      "id": "shame",
+      "name": "The Verdict",
+      "kicker": "Series V · one wound, two ways to carry it",
+      "form": "strata",
+      "intro": "Shame is the verdict 'I am the bad thing'. A verdict you cannot appeal can only be carried two ways: with no wall, or behind one. Read from the bottom up.",
+      "layers": [
+        { "label": "Narcissism — the armour", "note": "The wound walled over so well it is never felt: 'I am great', so 'I am bad' never has to be heard. Charm for the audience, cruelty at home." },
+        { "label": "Borderline — the open wound", "note": "The verdict with no wall. A terror of being left, love that swings from everything to nothing. Not the one who runs — the one who clings." },
+        { "label": "Shame — the verdict", "note": "Not 'I did a bad thing' but 'I am the bad thing'. Two exits: hide, or attack. The only door out is turning it back into guilt — a debt you can pay." }
+      ],
+      "caveat": "Two clinical names, used carefully: a map of patterns, not a way to diagnose the people you know. Most people live somewhere on the road between the wound and the wall."
     },
     {
       "id": "body-ledger",

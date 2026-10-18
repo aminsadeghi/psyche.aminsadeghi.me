@@ -2,9 +2,9 @@
   "note": "Mapping data for the Atlas (atlas.html). The Atlas drops the real case files (from catalog.json) onto several MAPS; the left rail switches between them. This file carries the editorial metadata each map reads: per-case 'move'/'before'/'after', the lens copy, the move-column copy, the symptom hubs, and the special layouts (body ledger tiers, the two hungers). Layout maths live in atlas.html; the words live here. Case ids match catalog.json. Literal Unicode only — no HTML entities.",
 
   "lenses": [
-    { "id": "crossing", "name": "The Crossing", "kicker": "The Cage → the Open Field", "intro": "Every case is the same motion: from the comfortable, unfree default to the owned, exposed self. Grouped by the move, not the series — so the same evasion at four different altitudes lines up in one column." },
+    { "id": "crossing", "name": "The Crossing", "kicker": "The Cage → the Open Field", "intro": "Every case is the same motion: from the comfortable, unfree default to the owned, exposed self. Grouped by the move, not the series — so the same evasion at five different altitudes lines up in one column." },
     { "id": "symptom", "name": "By Symptom", "kicker": "Enter by what is wrong", "intro": "Not chapters — complaints. Start from what you actually feel, and follow it to the cases that read it plainly. One symptom pulls cases from across the series." },
-    { "id": "curriculum", "name": "The Curriculum", "kicker": "Where to start", "intro": "The whole site as one building, raised from the ground up — four series, each a floor, each case a room. The reading order, honestly labelled as one view among several." },
+    { "id": "curriculum", "name": "The Curriculum", "kicker": "Where to start", "intro": "The whole site as one building, raised from the ground up — five series, each a floor, each case a room. The reading order, honestly labelled as one view among several." },
     { "id": "body-ledger", "name": "The Body's Ledger", "kicker": "Chemistry under character", "intro": "The self runs on a physical engine. The hardware cases stack from the baseline up; the character cases float above — because a shortage down here arrives disguised as who you are." },
     { "id": "two-hungers", "name": "The Two Hungers", "kicker": "Wanting is not liking", "intro": "The brain keeps two systems: the one that chases and the one that enjoys. The engineered cravings live in the gap between them — maximum pull, minimum payoff." }
   ],
@@ -33,7 +33,10 @@
     "3.2": { "move": "avoidance", "before": "gratitude as a lid on grief", "after": "dropping the lid" },
     "3.3": { "move": "ground", "before": "a poverty to escape", "after": "a field to work in" },
     "4.1": { "move": "ground", "before": "mailing the bill to a stranger", "after": "building the bridge" },
-    "4.2": { "move": "avoidance", "before": "a prison you already moved into", "after": "the open hand" }
+    "4.2": { "move": "avoidance", "before": "a prison you already moved into", "after": "the open hand" },
+    "5.1": { "move": "avoidance", "before": "a verdict you cannot pay", "after": "a debt you can" },
+    "5.2": { "move": "ground", "before": "the wound with no wall", "after": "practice, held over time" },
+    "5.3": { "move": "avoidance", "before": "the armour that found you", "after": "seeing why it worked" }
   },
 
   "symptoms": [
@@ -44,7 +47,10 @@
     { "q": "Life feels like it just happens to me.", "cases": ["1.2", "2.6", "1.4"] },
     { "q": "I keep numbing out or looking away.", "cases": ["1.3", "2.4", "3.2"] },
     { "q": "I cannot let go of what is already over.", "cases": ["4.2", "3.2"] },
-    { "q": "I do not know what any of it is for.", "cases": ["1.5", "4.1"] }
+    { "q": "I do not know what any of it is for.", "cases": ["1.5", "4.1"] },
+    { "q": "When I'm criticised, I shrink or I explode.", "cases": ["5.1", "1.3", "1.1"] },
+    { "q": "I'm terrified the people I love will leave.", "cases": ["5.2", "1.3", "5.1"] },
+    { "q": "Someone made me feel special, then made me feel nothing.", "cases": ["5.3", "5.2", "3.1"] }
   ],
 
   "bodyLedger": {
